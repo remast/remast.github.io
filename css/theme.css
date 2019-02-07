@@ -62,3 +62,23 @@ li {
     list-style: none;
     padding-bottom: 0.8em;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-left: 1em;
+    }
+
+    #hero .social {
+        font-size: 2em;
+    }
+}  
+
+@media screen and (max-width: 480px) {
+    body {
+        padding-left: .5em;
+    }
+
+    #hero .social {
+        font-size: 2em;
+    }
+}  
