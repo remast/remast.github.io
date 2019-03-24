@@ -12,7 +12,7 @@
 
 # 2016
 
-- 11/2016 [Groove your Jenkins](https://jaxenter.de/groove-your-jenkins-49423) für [JavaMagazin](https://jaxenter.de/magazine/java-magazin)
+- 11/2016 [Groove your Jenkins](https://jaxenter.de/groove-your-jenkins-49423), [Groove your Jenkins (pdf)](https://www.ppi.de/fileadmin/user_upload/Software-Entwicklung/Presse/Jm_Groove_your_Jenkins_08.16.pdf) für [JavaMagazin](https://jaxenter.de/magazine/java-magazin)
 
 # 2014
 
