@@ -1,5 +1,9 @@
 # Artikel
 
+## 2019
+
+- 02/2019 Go Modules - was es mit den neuen Modulen in Go auf sich hat, für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+
 ## 2018
 
 - 10/2018 [Go Modules - was es mit den neuen Modulen in Go auf sich hat](https://jaxenter.de/go-modules-go-1-11-75835), [Go 1.11: What the new modules in Go are all about](https://devopsconference.de/blog/go-1-11-new-modules/) für [JAXEnter](https://jaxenter.de)
