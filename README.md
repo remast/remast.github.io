@@ -26,6 +26,9 @@
 
 - 4-teilige Serie [OSGi goes Enterprise](https://jaxenter.de/modulare-enterprise-osgi-anwendungen-lets-transact-4-3725) für [EclipseMagazin](https://jaxenter.de/magazine/eclipse-magazin)
 
+# 2010
+- [Tests frisch gemixt mit Mockito](https://jaxenter.de/tests-frisch-gemixt-mit-mockito-2-7468">Tests frisch gemixt mit Mockito) für [JavaMagazin](https://jaxenter.de/magazine/java-magazin)
+
 # Vorträge
 
 ## 2018
