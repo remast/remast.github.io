@@ -2,6 +2,8 @@
 
 ## 2019
 
+- 09/2019 <a href="https://jaxenter.de/go-modules-revisited-86756">Go Modules Revisited: Aktiv by default</a>, für [JAXEnter](https://jaxenter.de)
+
 - 05/2019 <a href="https://entwickler.de/leseproben/go-buffalo-579902227.html">Go Buffalo - das vollständigste Ökosystem für Webanwendungen mit Go</a>, für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
 
 - 02/2019 Go Modules - was es mit den neuen Modulen in Go auf sich hat, für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
