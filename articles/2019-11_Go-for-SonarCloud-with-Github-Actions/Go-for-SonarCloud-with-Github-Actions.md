@@ -1,0 +1,1 @@
+# Go for SonarCloud with Github Actions
