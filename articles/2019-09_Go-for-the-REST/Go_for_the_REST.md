@@ -40,7 +40,7 @@ The generated handler tries to render the template `health/check.html` as HTML. 
 
 ```go
 func HealthCheck(c buffalo.Context) error {
-	return c.Render(200, r.HTML("health/check.html"))
+	return c.Render(200, r.String("Up and running!"))
 }
 ```
 
