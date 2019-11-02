@@ -2,7 +2,7 @@
 
 Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time. Since SonarQube natively supports Go it's a great fit to calculate metrics fo your Go project. 
 
-Learn the basics of analzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service in the cloud.
+Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service in the cloud.
 
 ## Set up a Build with Github Actions
 
@@ -26,7 +26,7 @@ jobs:
         run: make test
 ```
 
-Now Github runs our pipeline on every push to the git repository. The pipeline set's up an Go environment, clones, the repository and finally builds and tests with `make test`. The tests also calculate the code coverage of the tests and save it in `bin/cov.out`.
+Now Github runs our pipeline on every push to the git repository. The pipeline set's up an Go environment, clones the repository and finally builds and tests with `make test`. The tests also calculate the code coverage of the tests and save it in `bin/cov.out`.
 
 ## Run the SonarCloud Analysis as Step
 Now we can add the SonarCloud analysis as step in our pipeline using the [sonarcloud-github-action](https://github.com/SonarSource/sonarcloud-github-action). But before that you need to register for SonarCloud. You can use your Github account to sign up. 
