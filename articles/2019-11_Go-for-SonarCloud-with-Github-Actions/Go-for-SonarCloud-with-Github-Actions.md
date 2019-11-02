@@ -46,7 +46,7 @@ The SonarCloud Action needs two environment variables. The first one is `GITHUB_
 
 To generate the access token `SONAR_TOKEN`  log into SonarCloud. Now click on your profile and then go to 'My Account' and then 'Security'. Or go directly to [account/security](https://sonarcloud.io/account/security/). Generate your access token for SonarCloud here. The access token is provided to the build pipeline as a secret environment variable. Go to your repository settings in Github. Then to 'Secrets' and add a new secret with name `SONAR_TOKEN` and use the generated SonarCloud access token as value, as shown below.
 
-![Github Repostory Secrets](github-action-secrets.png?raw=true)
+![Github Repostory Secrets](https://github.com/remast/remast.github.io/raw/master/articles/2019-11_Go-for-SonarCloud-with-Github-Actions/github-action-secrets.png)
 
 Our new pipeline to build, test and analyze the source code with SonarCloud is shown below.
 
@@ -100,7 +100,7 @@ A live example of the pipeline can be found at [service_sonar](https://github.co
 ## Our project in the SonarCloud Dashboard
 After the first SonarCloud analysis you can see the results on the SonarCloud project dashboard shown below.
 
-![SonarCloud Dashboard](go-sonarcloud-dashboard.png?raw=true)
+![SonarCloud Dashboard](https://github.com/remast/remast.github.io/raw/master/articles/2019-11_Go-for-SonarCloud-with-Github-Actions/go-sonarcloud-dashboard.png)
 
 Check out dashboard of the sample project at https://sonarcloud.io/dashboard?id=de.red6%3Aservice_sonar.
 
@@ -204,7 +204,7 @@ A live example of the pipeline can be found at [service_sonar](https://github.co
 ## Add a SonarCloud Badge
 We can add a SonarCloud badge to our project to quickly show the SonarCloud status of our project from within the readme. To create SonarCloud badge go to your SonarCloud project dashboard and click 'Get project badges'. You can choose between three badges as shown below.
 
-![SonarCloud Badges](sonarcloud-badges.png?raw=true)
+![SonarCloud Badges](https://github.com/remast/remast.github.io/raw/master/articles/2019-11_Go-for-SonarCloud-with-Github-Actions/sonarcloud-badges.png)
 
 ## Wrap Up
 Now you have learned how to analyse Go code using SonarCloud from a Github Action pipeline. By using a separate job for the SonarCloud analysis we are able to run the  time-consuming analysis in parallel to other important tasks like integration tests or deployment.
