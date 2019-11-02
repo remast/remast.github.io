@@ -4,9 +4,11 @@ Metrics like lines of code or test coverage are great to track and improve the q
 
 Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service in the cloud.
 
+{% link remast/go-for-sonarqube-4iho %}
+
 ## Set up a Build with Github Actions
 
-We start by setting up a basic build pipeline for our Go project using Github Actions. We use the Github's official Go action [setup-go](https://github.com/actions/setup-go) for our build. So we create our pipeline for Github Actions in the file `.github/workflows/build.yml` with the following content:
+We start by setting up a basic build pipeline for our Go project using [Github Actions](https://github.com/features/actions). We use the Github's official Go action [setup-go](https://github.com/actions/setup-go) for our build. So we create our pipeline for Github Actions in the file `.github/workflows/build.yml` with the following content:
 
 ```yaml
 on: push
@@ -210,3 +212,5 @@ We can add a SonarCloud badge to our project to quickly show the SonarCloud stat
 Now you have learned how to analyse Go code using SonarCloud from a Github Action pipeline. By using a separate job for the SonarCloud analysis we are able to run the  time-consuming analysis in parallel to other important tasks like integration tests or deployment.
 
 All code is provided as a running example in the Github project [service_sonar](https://github.com/remast/service_sonar).
+
+{% github remast/service_sonar no-readme %}
