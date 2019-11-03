@@ -44,7 +44,7 @@
 
 ## 2017
 
-- 03/2017 [Go Parallel](https://go-talks.appspot.com/github.com/remast/remast.github.io/2017-03_parallel_Go-Parallel/go-parallel.slide) auf der [parallel 2017](https://www.parallelcon.de/)
+- 03/2017 [Go Parallel](https://go-talks.appspot.com/github.com/remast/remast.github.io/talks/2017-03_parallel_Go-Parallel/go-parallel.slide) auf der [parallel 2017](https://www.parallelcon.de/)
 
 ## 2016
 
