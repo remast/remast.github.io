@@ -21,7 +21,7 @@ What if we want to know how the key metrics of our source code evolved over time
 
 That’s where [SonarQube](https://www.sonarqube.org) comes into play. SonarQube analyses source code using static code analysis, code coverage and unit tests over time. That way SonarQube is able to answer all the questions above. You see that version 1.0.0 had 1.562 lines of code with a coverage of 85%, whereas now you are at version 2.1.0 with 3.842 lines of code. If you look closer, you see that the package *auth* has grown the most. In SonarQube you see how your key metrics and your source code have evolved over time and over specific versions like shown below.
 
-![SonarQube results over time](https://thepracticaldev.s3.amazonaws.com/i/5y4hi16l3dtraeqlwjyv.png)*SonarQube results over time*
+![SonarQube results over time](sonarqube_over_time.png?raw=true)*SonarQube results over time*
 
 If you have a project or a company developing services in different programming languages, you have another benefit of using SonarQube for key source code metrics. SonarQube is able to calculate these key metrics for many different programming languages like Go, Java, C#, JavaScript and many others. That way you can calculate combined key metrics even for projects or companies which use many different programming languages. E.g. you your project overall has 12.346 lines of code with an overall code coverage of 76%. The JavaScript frontend has 3.704 lines of code which is round about one third of your Java backend.
 
@@ -59,9 +59,9 @@ The sample project also includes a configuration for Gitlab CI in *.gitlab-ci.ym
 
 After running the SonarQube analysis you see the results in SonarQube:
 
-![Result of first SonarQube analysis](https://thepracticaldev.s3.amazonaws.com/i/7dkvjldnj2compu3c9g8.png)*Result of first SonarQube analysis*
+![Result of first SonarQube analysis](sonarqube_first_analysis.png?raw=true)*Result of first SonarQube analysis*
 
-![Overview of SonarQube results](https://thepracticaldev.s3.amazonaws.com/i/yupeh3xi94taacasvzfg.png)*Overview of SonarQube results*
+![Overview of SonarQube results](sonarqube_overview_results.png?raw=true)*Overview of SonarQube results*
 
 ## Summary
 

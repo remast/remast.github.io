@@ -1,10 +1,10 @@
 # Go for SonarCloud with Github Actions
 
-Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time. Since SonarQube natively supports Go it's a great fit to calculate metrics fo your Go project. 
-
-Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service in the cloud.
+Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service.
 
 {% link remast/go-for-sonarqube-4iho %}
+
+Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time. Since SonarQube natively supports Go it's a great fit to calculate metrics fo your Go project. 
 
 ## Set up a Build with Github Actions
 
