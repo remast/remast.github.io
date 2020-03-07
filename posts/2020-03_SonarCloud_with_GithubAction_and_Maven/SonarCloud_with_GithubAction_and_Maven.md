@@ -1,4 +1,4 @@
-#Using SonarCloud with Github Actions and Maven
+# Using SonarCloud with Github Actions and Maven
 
 In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions. 
 
