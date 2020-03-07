@@ -9,17 +9,17 @@ Actions to run the Maven build. So finally we have a fully functional ci pipelin
 ### Step 1: Create a Project
 In order to use [SonarCloud](https://sonarcloud.io/) you need to create an account and set up a project. So first create an account and log in. Now you can create a new project [here](https://sonarcloud.io/projects/create) or using the '+' button. A project in SonarCloud must belong to an organization. SonarCloud automatically imports your Github organizations. So you can use any of your Github organizations or use the default organization by your Github user name. 
 
-![SonarCloud Create Project](SonarCloud_CreateProject.png)
+![SonarCloud Create Project](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_CreateProject.png)
 
 Once you. After you've created your project your project has an organization key and a project key. You'll need both to run an SonarCloud analysis. You can always look up organization key and project key from the dashboard
 of your project like shown below.
 
-![SonarCloud Project Key](SonarCloud_ProjectKey.png)
+![SonarCloud Project Key](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_ProjectKey.png)
 
 ### Step 2: Generate a SonarCloud Token
 Now we'll set up a secure token as authentication for SonarCloud. Generate a new token from the tab 'security' in your account settings (which is [here](https://sonarcloud.io/account/security/)). Make sure to store the token since you'll only see it right after you've greated it. Now you're all set up to run a first analysis.
 
-![SonarCloud Generate Token](SonarCloud_GenerateToken.png)
+![SonarCloud Generate Token](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_GenerateToken.png)
 
 ## Run a SonarCloud analysis locally using Maven
 You can run the SonarCloud analysis using maven. The organization key, project key and the generated token must be passed to the Sonar Maven Plugin as well as the url for SonarCloud. Replace `<GENERATED_TOKEN>` with the SonarCloud token you generated in the previous step. So the command is:
@@ -61,7 +61,7 @@ jobs:
 
 Now every build of your Github Actions pipeline analyzes the code using SonarCloud. That looks like below or see it live in action in the [Baralga Actions](https://github.com/Baralga/baralga/actions).
 
-![Baralga SonarCloud Build](SonarCloud_GithubActionsBuild.png)
+![Baralga SonarCloud Build](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_GithubActionsBuild.png)
 
 ## Topping it off with Code Coverage
 As last step we add the code coverage of our unit tests to SonarCloud. 
@@ -97,7 +97,7 @@ We use [Jacoco](https://www.eclemma.org/jacoco/) to calculate the code coverage 
 
 We tell SonarCloud where to find the calculated code coverage using the parameter `-Dsonar.coverage.jacoco.xmlReportPaths=${project.build.directory}/site/jacoco/jacoco.xml` for our Maven build.
 
-## Wrap Up
+## Summary
 
 Step by step we introduced SonarCloud to analyze our code within our ci pipeline using Github Actions. Whenever our ci pipeline runs the code is analyze using SonarClound and the results and metrics are available
 in the SonarCloud dashboard. You can find a working example at [baralga](https://github.com/Baralga/baralga).
