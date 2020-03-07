@@ -1,6 +1,6 @@
 # Using SonarCloud with Github Actions and Maven
 
-In this post you will will learn how to analyse your Java Maven project with [SonarCloud](https://sonarcloud.io/) using [Github Actions](https://github.com/features/actions). 
+In this post you will will learn how to analyse your Java [Maven](https://maven.apache.org/) project with [SonarCloud](https://sonarcloud.io/) using [Github Actions](https://github.com/features/actions). 
 
 Starting point is a simple Java project with a Maven build. First we'll use SonarCloud to analyze our source code from our local dev environment. Then we'll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions.
 
