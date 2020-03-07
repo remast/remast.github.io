@@ -1,10 +1,4 @@
----
-title: Using SonarCloud with Github Actions and Maven
-published: false
-description: Learn how to analyse your Java Maven project with SonarCloud using Github Actions.
-cover_image: https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_ProjectKey.png
-tags: #java,#architecture,#tutorial,#beginners
----
+#Using SonarCloud with Github Actions and Maven
 
 In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions. 
 
