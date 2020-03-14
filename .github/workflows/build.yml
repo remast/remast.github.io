@@ -17,4 +17,4 @@ jobs:
     - name: Build with Parcel
       run: npm run build
     - name: Deploy
-      run: echo "${{ github.head_ref }}"
+      run: echo "${{ github.ref }}"
