@@ -1,0 +1,86 @@
+html {
+    font-family: 'Fira Mono', monospace;
+    background-color: #0C160C;
+    color: #FFFFFF;
+}
+
+body {
+    padding-left: 2em;
+}
+
+#hero h1::before {
+    content: '';
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero h1 {
+    padding-top: inherit;
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+#hero .social {
+    font-size: 1.4em;
+    color: #A67A00
+}
+
+.social a {
+    color: #856200
+}
+
+.social a:hover {
+    color: #624800;
+}
+
+h1 {
+    padding-top: 1.4em;
+    font-weight: bold;
+}
+
+h2 {
+    color: #DFC4FE
+}
+
+h1::before {
+    content: ">_ ";
+    color: #DFC4FE; 
+}
+
+a {
+    color: #A67A00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #856200;
+}
+
+li {
+    list-style: none;
+    padding-bottom: 0.8em;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding-left: 1em;
+    }
+
+    #hero .social {
+        font-size: 2em;
+    }
+}  
+
+@media screen and (max-width: 480px) {
+    body {
+        padding-left: .5em;
+    }
+
+    #hero .social {
+        font-size: 2em;
+    }
+}  
+
+/*# sourceMappingURL=/theme.a0cc3e13.css.map */
