@@ -1,3 +1,5 @@
+[![Github Actions Status for Baralga/baralga](https://github.com/remast/remast.github.io/workflows/Build/badge.svg)](https://github.com/remast/remast.github.io/actions) 
+
 # Artikel
 
 ## 2019
