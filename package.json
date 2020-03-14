@@ -1,0 +1,25 @@
+{
+  "name": "remast.github.io",
+  "version": "1.0.0",
+  "description": "Personal site of Jan Stamer",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build --no-source-maps src/index.html src/googlee93b8268afb3b77f.html",
+    "deploy": "gh-pages -d dist -b master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remast/remast.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remast/remast.github.io/issues"
+  },
+  "homepage": "https://github.com/remast/remast.github.io#readme",
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
