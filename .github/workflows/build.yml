@@ -1,5 +1,8 @@
 name: Build
-on: [push]
+on:
+  push:
+    branches:
+      - develop
 jobs:
   build:
     runs-on: ubuntu-18.04
@@ -17,4 +20,4 @@ jobs:
     - name: Build with Parcel
       run: npm run build
     - name: Deploy
-      run: echo "${{ github.ref }}"
+      run: npm run deploy
