@@ -4,7 +4,7 @@
 
 ## 2020
 
-- 04/2020 Einführung in Go-Module (Infografik), für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+- 04/2020 [Einführung in Go-Module (Infografik)](https://kiosk.entwickler.de/entwickler-magazin/entwickler-magazin-3-2020/einfuehrung-in-go-module/), für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
 
 ## 2019
 
