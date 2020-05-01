@@ -2,6 +2,10 @@
 
 # Artikel
 
+## 2020
+
+- 04/2020 Einführung in Go-Module (Infografik), für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+
 ## 2019
 
 
