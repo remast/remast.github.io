@@ -46,7 +46,7 @@
 
 ## 2018
 
-- 08/2018 [Go Modules](https://docs.google.com/presentation/d/1NZrvgruD7Sn9lh6eA6xj65iYqIWX6ZjX-fPefOg16Dk/edit?usp=sharing), [Go Modules (pdf)](https://raw.githubusercontent.com/remast/remast.github.io/master/talks/2018-08-23_GoMeetupHH_Go_Modules.pdf) beim [Go Meetup HH](https://www.meetup.com/de-DE/Go-User-Group-Hamburg/)
+- 08/2018 [Go Modules](https://docs.google.com/presentation/d/1NZrvgruD7Sn9lh6eA6xj65iYqIWX6ZjX-fPefOg16Dk/edit?usp=sharing), [Go Modules (pdf)](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2018-08-23_GoMeetupHH_Go_Modules.pdf) beim [Go Meetup HH](https://www.meetup.com/de-DE/Go-User-Group-Hamburg/)
 
 ## 2017
 
@@ -54,13 +54,13 @@
 
 ## 2016
 
-- 09/2016 [Camunda BPM bei der Hansemerkur](https://raw.githubusercontent.com/remast/remast.github.io/master/talks/2016-09_BPMCon_Camunda_HanseMerkur.pdf) auf der [BPMCon 2016](https://camunda.com/events/camundacon/), Video unter https://vimeo.com/186233436
+- 09/2016 [Camunda BPM bei der Hansemerkur](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2016-09_BPMCon_Camunda_HanseMerkur.pdf) auf der [BPMCon 2016](https://camunda.com/events/camundacon/), Video unter https://vimeo.com/186233436
 
 ## 2015
 
-- 05/2015 [Elefant unter Strom](https://raw.githubusercontent.com/remast/remast.github.io/master/talks/2015-05_JUGS_HH_Elefant_unter_Strom.pdf) für die [Java User Group Hamburg](http://www.jughh.de)
+- 05/2015 [Elefant unter Strom](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2015-05_JUGS_HH_Elefant_unter_Strom.pdf) für die [Java User Group Hamburg](http://www.jughh.de)
 
 ## 2013
 
-- 07/2013 [OSGi goes Enterprise](https://raw.githubusercontent.com/remast/remast.github.io/master/talks/2013-07_EclipseDemoCamp_OSGi_goes_Enterprise.pdf) für Eclise Demo Camp Stuttgart
+- 07/2013 [OSGi goes Enterprise](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2013-07_EclipseDemoCamp_OSGi_goes_Enterprise.pdf) für Eclise Demo Camp Stuttgart
 - 2013 Gurkensalat statt Spghetticode auf den Stuttgarter Testtagen 2013
