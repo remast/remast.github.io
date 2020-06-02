@@ -63,4 +63,4 @@
 ## 2013
 
 - 07/2013 [OSGi goes Enterprise](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2013-07_EclipseDemoCamp_OSGi_goes_Enterprise.pdf) für Eclise Demo Camp Stuttgart
-- 2013 Gurkensalat statt Spghetticode auf den Stuttgarter Testtagen 2013
+- 2013 Gurkensalat statt Spaghetticode auf den Stuttgarter Testtagen 2013
