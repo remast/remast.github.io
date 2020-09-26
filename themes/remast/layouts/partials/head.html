@@ -1,0 +1,18 @@
+{{ $style := resources.Get "css/style.css" | minify | fingerprint }}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/4c09906fcb.js" async></script>
+
+    <link   rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" />
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Zilla+Slab:wght@300;700&display=swap" rel="stylesheet"> 
+    {{ $title := print .Site.Title " | " .Title -}}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    {{ if .Params.canonicalUrl -}}
+    <link rel="canonical" href="{{ .Params.canonicalUrl }}">
+    {{ else }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ end -}}
+
+    <title>{{ $title }}</title>
+</head>
