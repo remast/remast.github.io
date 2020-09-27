@@ -105,5 +105,3 @@ We tell SonarCloud where to find the calculated code coverage using the paramete
 
 Step by step we introduced SonarCloud to analyze our code within our ci pipeline using Github Actions. Whenever the ci pipeline runs, the code is analyzed using SonarCloud and the results and metrics are available
 in the SonarCloud dashboard. You can find a working example at [baralga](https://github.com/Baralga/baralga).
-
-{% github github.com/Baralga/baralga no-readme %}

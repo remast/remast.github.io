@@ -80,6 +80,4 @@ SonarQube provides two benefits:
 
 So you should definitely give [SonarQube](https://www.sonarqube.org) for Go a try.
 
-{% github remast/service_sonar %} 
-
 *This post originally appeared on [medium](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a).*

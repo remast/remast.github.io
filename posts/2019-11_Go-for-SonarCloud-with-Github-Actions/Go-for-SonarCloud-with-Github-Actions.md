@@ -212,5 +212,3 @@ We can add a SonarCloud badge to our project to quickly show the SonarCloud stat
 Now you have learned how to analyse Go code using SonarCloud from a Github Action pipeline. By using a separate job for the SonarCloud analysis we are able to run the  time-consuming analysis in parallel to other important tasks like integration tests or deployment.
 
 All code is provided as a running example in the Github project [service_sonar](https://github.com/remast/service_sonar).
-
-{% github remast/service_sonar no-readme %}
