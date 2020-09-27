@@ -2,6 +2,8 @@
 title: "The Coders Bucket List"
 date: 2019-10-01T23:11:13Z
 draft: false
+canonicalUrl: "https://dev.to/remast/the-coders-bucket-list-138m"
+tags: ["beginners", "career"]
 ---
 
 A bucket list is a list of things you ought to do before you [*kick the bucket*](https://en.wikipedia.org/wiki/Kick_the_bucket) and die. Here's a bucket list for every coder out there. Check it out and tackle them one at a time!
