@@ -4,6 +4,8 @@ date: 2019-08-01T23:11:13Z
 tags: ["architecture", "career", "design", "microservices"]
 draft: false
 canonicalUrl: "https://dev.to/remast/my-software-architecture-resources-g38"
+images:
+- /posts/2020-03_sonarcloud_with_githubaction_and_maven/cover.webp
 ---
 
 Here are my top books and resources on software architecture. All of these are really great sources of knowledge for anyone who's dealing with software architecture. And that should be anyone who develops software. Since software architecture is a team responsibility and should be a team effort.

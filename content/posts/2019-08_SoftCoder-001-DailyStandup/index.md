@@ -3,6 +3,8 @@ title: "Soft Coder / 3x3 des Daily Standup"
 date: 2019-08-01T23:11:13Z
 draft: false
 canonicalUrl: "https://medium.com/@remast/softcoder-001-dailystandup-adcac2b4361e"
+images:
+- /posts/2019-08_softcoder-001-dailystandup/cover.webp
 ---
 
 Egal ob Kanban oder Scrum, täglich grüßt das Daily Standup. Das Team hat 15 Minuten, um die wichtigsten Informationen von gestern und heute auszutauschen. Du hast 30 Sekunden. Nutze sie. 
