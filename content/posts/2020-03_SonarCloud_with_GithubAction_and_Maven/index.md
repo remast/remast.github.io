@@ -1,4 +1,8 @@
-# Using SonarCloud with Github Actions and Maven
+---
+title: "Using SonarCloud with Github Actions and Maven"
+date: 2020-03-01T23:11:13Z
+draft: false
+---
 
 In this post you will will learn how to analyse your Java [Maven](https://maven.apache.org/) project with [SonarCloud](https://sonarcloud.io/) using [Github Actions](https://github.com/features/actions). 
 
@@ -9,17 +13,17 @@ Starting point is a simple Java project with a Maven build. First we'll use Sona
 ### Step 1: Create a Project
 In order to use [SonarCloud](https://sonarcloud.io/) you need to create an account and set up a project. So first create an account and log in. Now you can create a new project [here](https://sonarcloud.io/projects/create) or using the '+' button. A project in SonarCloud must belong to an organization. SonarCloud automatically imports your Github organizations. So you can use any of your Github organizations or use the default organization by your Github user name. 
 
-![SonarCloud Create Project](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_CreateProject.png)
+![SonarCloud Create Project](SonarCloud_CreateProject.png)
 
 After you've created your project, your project has an organization key and a project key. You'll need both to run an SonarCloud analysis. You can always look up organization key and project key from the dashboard
 of your project like shown below.
 
-![SonarCloud Project Key](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_ProjectKey.png)
+![SonarCloud Project Key](SonarCloud_ProjectKey.png)
 
 ### Step 2: Generate a SonarCloud Token
 Now we'll set up a secure token as authentication for SonarCloud. Generate a new token from the tab 'security' in your account settings (which is [here](https://sonarcloud.io/account/security/)). Make sure to store the token since you'll only see it right after you've greated it. Now you're all set up to run a first analysis.
 
-![SonarCloud Generate Token](https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_GenerateToken.png)
+![SonarCloud Generate Token](SonarCloud_GenerateToken.png)
 
 ## Run SonarCloud analysis locally using Maven
 You can run the SonarCloud analysis using maven. The organization key, project key and the generated token must be passed to the [Sonar Maven Plugin](https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/) as well as the url for SonarCloud. Replace `<GENERATED_TOKEN>` with the SonarCloud token you generated in the previous step. So the command is:

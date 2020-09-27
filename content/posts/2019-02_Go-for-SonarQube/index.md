@@ -1,5 +1,8 @@
-
-# Go for SonarQube
+---
+title: "Go for SonarQube"
+date: 2017-02-01T23:11:13Z
+draft: false
+---
 
 Static code analysis is a great and easy way to discover bugs, race conditions, code smells or to check whether code matches the coding conventions. I will motivate why it’s useful to use SonarQube for static analysis of Go code and show you how it’s done.
 
@@ -31,19 +34,21 @@ Let’s see how we can analyse our Go code using SonarQube.
 
 To analyse Go code with SonarQube you need a running SonarQube. You can run SonarQube locally with docker run --name sonarqube -p 9000:9000 sonarqube. The Go plugin comes with SonarQube so no need to install it manually. Now you are ready to analyse your source code. For that we use the [sonar-scanner tool](https://docs.sonarqube.org/display/SCAN/Analyzing+with+SonarQube+Scanner) provided by SonarQube, which needs a Java Runtime Environment. Next we need a configuration file for SonarQube named *sonar-project.properties* in the root of your project. The configuration file tells SonarQube which sources to analyse, the name and version of the project and where to find the test coverage. See an example *sonar-project.properties* below:
 
-    sonar.projectKey=de.red6:service_sonar
-    sonar.projectName=service_sonar
-    sonar.projectVersion=1.0.0
-    sonar.host.url=http://localhost:9000
-    sonar.login=**SECRET**
-    
-    sonar.sources=.
-    sonar.exclusions=**/*_test.go,**/vendor/**,**/testdata/*
-     
-    sonar.tests=.
-    sonar.test.inclusions=**/*_test.go
-    sonar.test.exclusions=**/vendor/**
-    sonar.go.coverage.reportPaths=bin/cov.out
+```bash
+sonar.projectKey=de.red6:service_sonar
+sonar.projectName=service_sonar
+sonar.projectVersion=1.0.0
+sonar.host.url=http://localhost:9000
+sonar.login=**SECRET**
+
+sonar.sources=.
+sonar.exclusions=**/*_test.go,**/vendor/**,**/testdata/*
+ 
+sonar.tests=.
+sonar.test.inclusions=**/*_test.go
+sonar.test.exclusions=**/vendor/**
+sonar.go.coverage.reportPaths=bin/cov.out
+```
 
 Before you can analyse your code with SonarQube you need to run the tests and record the code coverage (e.g. with ``go test -short -coverprofile=bin/cov.out `go list./..|grep -v vendor/```). SonarQube will use the recorded code coverage.
 

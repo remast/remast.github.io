@@ -1,0 +1,113 @@
+html {
+    font-family: 'Fira Mono', monospace;
+    background-color: #0C160C;
+    color: #FFFFFF;
+}
+
+body {
+}
+
+#hero h1::before {
+    content: '';
+}
+
+#hero {
+    text-align: center;
+}
+
+#hero h1 {
+    padding-top: inherit;
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+#hero .social {
+    font-size: 1.4em;
+    color: #C8B411
+}
+
+.social a {
+    color: #C8B411
+}
+
+.social a:hover {
+    color: #624800;
+}
+
+h1 {
+    padding-top: 1.2em;
+    font-weight: bold;
+}
+
+h2 {
+    color: #DFC4FE
+}
+
+h1::before {
+    content: ">_ ";
+    color: #DFC4FE; 
+}
+
+a {
+    color: #A67A00;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #856200;
+}
+
+li {
+    list-style: none;
+    padding-bottom: 0.8em;
+}
+
+p {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.2em;
+}
+
+#content,nav {
+    max-width: 960px;
+    margin: auto;
+}
+
+nav {
+    background-color: #431788;
+    padding: .7em;
+    font-size: 1.2em;
+    margin-top: 1.4em;
+}
+
+nav a {
+    color: #C8B411;
+}
+
+nav a.active {
+    color: #574E00;
+}
+
+article p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 768px) {
+
+    #hero .social {
+        font-size: 2em;
+    }
+
+    img {
+        max-width: 768px;
+    }
+}  
+
+@media screen and (max-width: 480px) {
+    img {
+        max-width: 480px;
+    }
+
+    #hero .social {
+        font-size: 2em;
+    }
+}  

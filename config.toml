@@ -1,0 +1,15 @@
+baseURL = "https://remast.github.io"
+languageCode = "de-de"
+title = ">_ Jan Stamer"
+theme = "remast"
+[menu]
+  [[menu.main]]
+    name = "home"
+    pre = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "posts"
+    pre = "posts"
+    url = "/posts/"
+    weight = 2

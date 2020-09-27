@@ -1,4 +1,8 @@
-# Go for SonarCloud with Github Actions
+---
+title: "Go for SonarCloud with Github Actions"
+date: 2019-11-01T23:11:13Z
+draft: false
+---
 
 Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service.
 
@@ -78,7 +82,7 @@ jobs:
 ## Add Code Coverage to SonarCloud
 SonarCloud is able to analyze our source code. Yet it's not able to pick up the code coverage of our tests which is stored in the file `bin/cov.out`. And this is a bit tricky. The sonar-scanner looks for the code coverage in file `/home/runner/work/service_sonar/service_sonar/bin/cov.out`. That's where it is after the tests. The problem is the sonar-scanner tool is executed with docker and mounts the current directory as a volume like `docker run --workdir /github/workspace [...] -v "/home/runner/work/service_sonar/service_sonar":"/github/workspace"`. Within the docker run there is no file `/home/runner/work/service_sonar/service_sonar/bin/cov.out` but the path of that file within docker is actually `/github/workspace/bin/cov.out`. So we need to use that path as `sonar.go.coverage.reportPaths` in the SonarQube settings file `sonar-project.properties`. The full `sonar-project.properties` for Github Actions are shown below: 
 
-```
+```bash
 # Github organization linked to sonarcloud
 sonar.organization=remast
 

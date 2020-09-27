@@ -63,6 +63,10 @@ li {
     padding-bottom: 0.8em;
 }
 
+p {
+    font-family: 'Faustina', serif;
+}
+
 @media screen and (max-width: 768px) {
     body {
         padding-left: 1em;
