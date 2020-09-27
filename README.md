@@ -4,6 +4,8 @@
 
 ## 2020
 
+- 09/2020 [Buchrezension: Go – Das Praxisbuch ](https://www.heise.de/hintergrund/Buchrezension-Go-Das-Praxisbuch-4888936.html) für [heise online](https://www.heise.de/)
+
 - 04/2020 [Einführung in Go-Module (Infografik)](https://kiosk.entwickler.de/entwickler-magazin/entwickler-magazin-3-2020/einfuehrung-in-go-module/), für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
 
 ## 2019
