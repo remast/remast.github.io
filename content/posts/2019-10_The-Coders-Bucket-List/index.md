@@ -64,5 +64,4 @@ Building a web frontend as a server rendered app is a classic but still very val
 Shell scripting is quick way to script and automate tasks on any Linux and Unix machine. Learn to write a script for the [Bash](https://www.gnu.org/software/bash/) shell. Make use of classic tools for shell scripting like `awk`, `sed` or `cut`. If you want to top it off write your script in [vim](https://www.vim.org/) or [emacs](https://www.gnu.org/software/emacs/) (see above).
 
 ## Hack in a Capture the Flag Contest
-Improve your security skills and learn how to hack in a capture the flag contest. Read all about it here:
-{% post https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744 %}
+Improve your security skills and learn how to hack in a capture the flag contest. Read all about it here: [Learn How to Hack, Capture the Flag for Beginners!](https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744).
