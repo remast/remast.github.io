@@ -8,20 +8,16 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/cache@v1
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
       with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
-    - name: Build with Parcel
-      run: npm run build
+        hugo-version: '0.75.1'
+        # extended: true
+    - name: Build
+      run: hugo --minify
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./dist
+        publish_dir: ./public
         publish_branch: master  # deploying branch
