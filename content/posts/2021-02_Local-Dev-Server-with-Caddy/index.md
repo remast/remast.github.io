@@ -1,7 +1,8 @@
 ---
-title: Local Dev Setup with automatic HTTPS + WebSockets in 1 Line
-date: 2021-07-02T16:11:13Z
-canonicalUrl: "https://dev.to/remast/local-dev-setup-with-automatic-https-websockets-in-1-line-28le"
+title: "Local Dev Setup with automatic HTTPS + WebSockets in 1 Line"
+date: 2021-02-02T16:11:13Z
+draft: false
+canonicalUrl: "https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg"
 ---
 
 Let's set up a local web server for development that supports automatic HTTPs and WebSockets in just 1 line of code. No problem thanks to the awesome [Caddyserver](https://caddyserver.com/).
