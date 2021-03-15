@@ -46,6 +46,10 @@
 
 # Vorträge
 
+## 2021
+
+- 06/2021 [Develper Week '21](https://www.developer-week.de), [Java to Go – Google Go für Java-Entwickler](https://www.developer-week.de/programm/#/talk/java-to-go-google-go-fur-java-entwickler)
+
 ## 2018
 
 - 08/2018 [Go Modules](https://docs.google.com/presentation/d/1NZrvgruD7Sn9lh6eA6xj65iYqIWX6ZjX-fPefOg16Dk/edit?usp=sharing), [Go Modules (pdf)](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2018-08-23_GoMeetupHH_Go_Modules.pdf) beim [Go Meetup HH](https://www.meetup.com/de-DE/Go-User-Group-Hamburg/)
