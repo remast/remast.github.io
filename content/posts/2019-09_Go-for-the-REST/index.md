@@ -2,6 +2,7 @@
 title: "Go for the REST"
 date: 2019-09-01T23:11:13Z
 draft: false
+canonicalUrl: "https://dev.to/remast/go-for-the-rest-1jp9"
 ---
 
 The Go programming language is a great fit for RESTful web applications. Picking the right Go web framework to start with is not an easy task. Lucky enough it is a task solved already. Pick the Go web framework [buffalo](https://gobuffalo.io) and off you go. Not convinced yet? Learn how to build a RESTful web application with [buffalo](https://gobuffalo.io).

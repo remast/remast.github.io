@@ -2,6 +2,7 @@
 title: "Go for SonarCloud with Github Actions"
 date: 2019-11-01T23:11:13Z
 draft: false
+canonicalUrl: "https://dev.to/remast/go-for-sonarcloud-with-github-actions-3pmn"
 ---
 
 Learn the basics of analyzing a Go project with SonarQube in my post [Go for SonarQube](https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a). In this post I'll show you how to use [Github Actions]() to analyze your Go project with [SonarCloud](https://sonarcloud.io). SonarCloud offers SonarQube as a service.

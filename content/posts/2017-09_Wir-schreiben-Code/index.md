@@ -2,6 +2,7 @@
 title: "Wir schreiben Code"
 date: 2017-09-01T23:11:13Z
 draft: false
+canonicalUrl: "https://medium.com/@remast/wir-schreiben-code-92bd11c5466d"
 ---
 
 Wir Software Entwickler lesen und schreiben viel. Aber unser Genre ist nicht Belletristik und nicht Liebesromane. Wir lesen Code. In vielen Sprachen. Wir lesen und schreiben XML, SQL, Java oder JavaScript. Der eine bevorzugt Java, die andere PHP. Wenn wir schreiben sind wir genau und präzise, das müssen wir. Jedes Wort ist wichtig. Auch einzelne Zeichen können entscheiden über Gewinn oder Verlust, manchmal auch über Tod oder Leben. Deswegen müssen wir genau sein, genau schreiben ohne Missverständnisse oder Kompromisse zuzulassen.

@@ -2,6 +2,7 @@
 title: "Using SonarCloud with Github Actions and Maven"
 date: 2020-03-01T23:11:13Z
 draft: false
+canonicalUrl: "https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg"
 ---
 
 In this post you will will learn how to analyse your Java [Maven](https://maven.apache.org/) project with [SonarCloud](https://sonarcloud.io/) using [Github Actions](https://github.com/features/actions). 

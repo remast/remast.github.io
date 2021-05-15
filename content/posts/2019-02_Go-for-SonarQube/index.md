@@ -2,6 +2,7 @@
 title: "Go for SonarQube"
 date: 2017-02-01T23:11:13Z
 draft: false
+canonicalUrl: "https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a"
 ---
 
 Static code analysis is a great and easy way to discover bugs, race conditions, code smells or to check whether code matches the coding conventions. I will motivate why it’s useful to use SonarQube for static analysis of Go code and show you how it’s done.

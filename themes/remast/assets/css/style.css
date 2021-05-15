@@ -27,7 +27,8 @@ body {
 }
 
 .social a {
-    color: #C8B411
+    color: #C8B411;
+    padding: 0.3em;
 }
 
 .social a:hover {

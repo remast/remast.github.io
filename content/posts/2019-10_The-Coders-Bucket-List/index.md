@@ -2,6 +2,10 @@
 title: "The Coders Bucket List"
 date: 2019-10-01T23:11:13Z
 draft: false
+canonicalUrl: "https://dev.to/remast/the-coders-bucket-list-138m"
+tags: ["beginners", "career"]
+images:
+- /posts/2019-10_the-coders-bucket-list/cover.png
 ---
 
 A bucket list is a list of things you ought to do before you [*kick the bucket*](https://en.wikipedia.org/wiki/Kick_the_bucket) and die. Here's a bucket list for every coder out there. Check it out and tackle them one at a time!
@@ -60,5 +64,4 @@ Building a web frontend as a server rendered app is a classic but still very val
 Shell scripting is quick way to script and automate tasks on any Linux and Unix machine. Learn to write a script for the [Bash](https://www.gnu.org/software/bash/) shell. Make use of classic tools for shell scripting like `awk`, `sed` or `cut`. If you want to top it off write your script in [vim](https://www.vim.org/) or [emacs](https://www.gnu.org/software/emacs/) (see above).
 
 ## Hack in a Capture the Flag Contest
-Improve your security skills and learn how to hack in a capture the flag contest. Read all about it here:
-{% post https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744 %}
+Improve your security skills and learn how to hack in a capture the flag contest. Read all about it here: [Learn How to Hack, Capture the Flag for Beginners!](https://dev.to/molly_struve/learn-how-to-hack-capture-the-flag-for-beginners-744).
