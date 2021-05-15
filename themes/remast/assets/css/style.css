@@ -92,6 +92,42 @@ article p {
     text-align: justify;
 }
 
+.tag {
+    padding: .3em;
+    border-radius: .3em;
+}
+
+.tags {
+   margin-top: .5em;
+   opacity: .6;
+}
+
+.tag-1 {
+    background-color: #0D4D4D;
+}
+
+.tag-2 {
+    background-color: #55AA55;
+}
+
+dl {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+dt {
+    flex-basis: 10%;
+    padding: 20px 40px 5px 0px;
+    text-align: right;
+}
+
+dd {
+    padding: 20px 40px 5px 0px;
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 0;
+}
+
 @media screen and (max-width: 768px) {
 
     #hero .social {
