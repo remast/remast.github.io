@@ -8,10 +8,6 @@ body {
     padding-left: 2em;
 }
 
-#hero h1::before {
-    content: '';
-}
-
 #hero {
     text-align: center;
 }

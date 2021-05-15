@@ -7,10 +7,6 @@ html {
 body {
 }
 
-#hero h1::before {
-    content: '';
-}
-
 #hero {
     text-align: center;
 }

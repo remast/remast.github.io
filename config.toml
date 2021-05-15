@@ -1,6 +1,6 @@
 baseURL = "https://remast.github.io"
 languageCode = "de-de"
-title = ">_ Jan Stamer"
+title = "Jan Stamer"
 theme = "remast"
 [menu]
   [[menu.main]]
