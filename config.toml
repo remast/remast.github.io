@@ -13,3 +13,5 @@ theme = "remast"
     pre = "posts"
     url = "/posts/"
     weight = 2
+[markup.goldmark.renderer]
+  unsafe= true
