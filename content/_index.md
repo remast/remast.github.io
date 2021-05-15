@@ -7,6 +7,13 @@ draft: false
 <h2>2021</h2>
 <dl>
     <dt>06/2021</dt>
+    <dd><a href="https://devopscon.io/go-day/go-web-development-101/">Go Web Development 101</a>
+    auf <a href="https://devopscon.io/berlin-de/">DevOpsCon Go Day</a>
+        <div class="tags">
+            <span class="tag tag-2">vortrag</span>
+        </div>
+    </dd>
+    <dt>06/2021</dt>
     <dd><a href="https://entwicklertag.de/karlsruhe/2021/java-go-google-go-f-r">Java to Go – Google Go für Java-Entwickler</a>
     auf <a href="https://entwicklertag.de/karlsruhe/2021/">Karlsruher Entwicklertag 2021</a>
         <div class="tags">
