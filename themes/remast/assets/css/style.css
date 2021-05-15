@@ -141,6 +141,10 @@ dd {
     }
 
     #hero .social {
-        font-size: 2em;
+        font-size: 1.8em;
+    }
+
+    dd {
+        padding: 0px 40px 5px 0;
     }
 }  

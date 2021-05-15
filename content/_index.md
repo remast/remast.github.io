@@ -37,7 +37,7 @@ draft: false
     </dd>
     <dt>05/2021</dt>
     <dd>
-        <a href="https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2021-05-04_VirtualTechConf_Java_to_Go.pdf">Java to Go – Google Go für Java-Entwickler</a> auf Commerzbank Virtual Tech Konferenz 2021
+        <a href="https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2021-05-04_VirtualTechConf_Java_to_Go.pdf">Java to Go – Google Go für Java-Entwickler</a> auf Commerzbank Virtual Tech Konferenz
         <div class="tags">
             <span class="tag tag-2">vortrag</span>
         </div>
