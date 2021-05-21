@@ -1,6 +1,7 @@
 ---
 title: "Create, Code, Share"
 date: 2019-09-01T23:11:13Z
+description: "Jan Stamer | Create, Code, Share"
 draft: false
 ---
 

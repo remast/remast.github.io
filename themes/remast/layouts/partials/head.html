@@ -17,6 +17,7 @@
 
     {{ template "_internal/opengraph.html" . }}
     {{ template "_internal/twitter_cards.html" . }}
+    <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
 
     <title>>_ {{ $title }}</title>
 </head>

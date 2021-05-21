@@ -15,3 +15,5 @@ theme = "remast"
     weight = 2
 [markup.goldmark.renderer]
   unsafe= true
+[params]
+  twitter = "jsTamer21k"
