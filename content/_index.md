@@ -23,6 +23,7 @@ draft: false
     </dd>
     <dt>06/2021</dt>
     <dd><a href="https://entwicklertag.de/karlsruhe/2021/turbo-powered-web-apps">Turbo powered Web Apps - moderne Web Anwendungen mit plain HTML</a>
+    <a href="https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2021-06-09_Turbo_powered_Web_Apps.pdf"><i class="fas fa-file-pdf" alt="Turbo powered Web Apps (PDF)"></i></a>
     auf <a href="https://entwicklertag.de/karlsruhe/2021/">Karlsruher Entwicklertag 2021</a>
         <div class="tags">
             <span class="tag tag-2">vortrag</span>
