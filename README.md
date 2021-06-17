@@ -48,6 +48,8 @@
 
 ## 2021
 
+* 12/2021 [IT Tage 2021](https://www.ittage.informatik-aktuell.de), [Java to Go – Google Go für Java-Entwickler](https://www.ittage.informatik-aktuell.de/programm/2021/google-go-fuer-java-entwickler-java-to-go.html)
+
 * 06/2021 [Karlsruher Entwicklertag 2021](https://entwicklertag.de/karlsruhe/2021/), [Java to Go – Google Go für Java-Entwickler](https://entwicklertag.de/karlsruhe/2021/java-go-google-go-f-r)
 
 * 06/2021 [Karlsruher Entwicklertag 2021](https://entwicklertag.de/karlsruhe/2021/), [Turbo powered Web Apps - moderne Web Anwendungen mit plain HTML](https://entwicklertag.de/karlsruhe/2021/turbo-powered-web-apps), [pdf](https://raw.githubusercontent.com/remast/remast.github.io/develop/talks/2021-06-09_Turbo_powered_Web_Apps.pdf)
