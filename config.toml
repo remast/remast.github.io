@@ -1,6 +1,7 @@
 baseURL = "https://remast.github.io"
 languageCode = "de-de"
 title = "Jan Stamer"
+author = "Jan Stamer"
 theme = "remast"
 [menu]
   [[menu.main]]
@@ -17,3 +18,4 @@ theme = "remast"
   unsafe= true
 [params]
   twitter = "jsTamer21k"
+  author = "Jan Stamer"

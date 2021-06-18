@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+{{ partial "metadata.html" . }}
+{{ partial "schema_article.html" . }}
+
+<article>
+{{ .Content }}
+</article>
+
+{{ end }}

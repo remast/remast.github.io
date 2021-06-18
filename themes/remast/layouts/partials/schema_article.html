@@ -1,0 +1,15 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ .Title }}",
+  "author.name": "{{ .Site.Params.author }}",
+  {{ if .Params.featuredImage -}}
+  "image": [
+    "{{ .Params.featuredImage | absURL }}"
+  ],
+  {{ end -}}
+  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "dateModified": "{{ .Lastmod.Format "2006-01-02" }}"
+}
+</script>
