@@ -19,3 +19,4 @@ theme = "remast"
 [params]
   twitter = "jsTamer21k"
   author = "Jan Stamer"
+  description = "Jan Stamer - Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor."
