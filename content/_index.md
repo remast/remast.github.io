@@ -14,6 +14,20 @@ draft: false
             <span class="tag tag-2">vortrag</span>
         </div>
     </dd>
+    <dt>09/2021</dt>
+    <dd><a href="https://javaforumnord.de/">Java to Go – Google Go für Java-Entwickler</a>
+    auf <a href="https://javaforumnord.de/">JavaForum Nord 2021</a>
+        <div class="tags">
+            <span class="tag tag-2">vortrag</span>
+        </div>
+    </dd>
+    <dt>09/2021</dt>
+    <dd><a href="https://www.scale-up-360.com/en/fintech-code">API first approach for world-class customer experience</a>
+    auf <a href="https://www.scale-up-360.com/en/fintech-code/agenda">ScaleUp 360° Fintech Code 2021</a>
+        <div class="tags">
+            <span class="tag tag-2">vortrag</span>
+        </div>
+    </dd>
     <dt>06/2021</dt>
     <dd><a href="https://devopscon.io/go-day/go-web-development-101/">Go Web Development 101</a>
     auf <a href="https://devopscon.io/berlin-de/">DevOpsCon Go Day</a>
