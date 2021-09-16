@@ -50,6 +50,10 @@
 
 * 12/2021 [IT Tage 2021](https://www.ittage.informatik-aktuell.de), [Java to Go – Google Go für Java-Entwickler](https://www.ittage.informatik-aktuell.de/programm/2021/google-go-fuer-java-entwickler-java-to-go.html)
 
+* 11/2021 [betterCode()](https://go.bettercode.eu/), [Einstieg in Go, Standardlibrary und Ökosystem](https://go.bettercode.eu/veranstaltung-13578-se-0-einstieg-in-go-standard-library-und-oekosystem.html)
+
+* 10/2021 [JCON 2021](https://jcon.one/), [Turbo powered Web Apps - moderne Web Anwendungen mit plain HTML](https://jcon.sched.com/event/k7JV/turbo-powered-web-apps-moderne-web-anwendungen-mit-plain-html?iframe=no)
+
 * 09/2021 [JavaForum Nord](https://javaforumnord.de/), [Java to Go – Google Go für Java-Entwickler](https://javaforumnord.de/)
 
 * 09/2021 [ScaleUp 360° Fintech Code 2021](https://www.scale-up-360.com/en/fintech-code/agenda), [API first approach for world-class customer experience](https://www.scale-up-360.com/en/fintech-code/agenda)

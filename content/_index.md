@@ -14,6 +14,20 @@ draft: false
             <span class="tag tag-2">vortrag</span>
         </div>
     </dd>
+    <dt>11/2021</dt>
+    <dd><a href="https://go.bettercode.eu/veranstaltung-13578-se-0-einstieg-in-go-standard-library-und-oekosystem.html">Einstieg in Go, Standardlibrary und Ökosystem</a>
+    auf <a href="https://go.bettercode.eu/">betterCode()</a>
+        <div class="tags">
+            <span class="tag tag-2">vortrag</span>
+        </div>
+    </dd>
+    <dt>10/2021</dt>
+    <dd><a href="https://jcon.sched.com/event/k7JV/turbo-powered-web-apps-moderne-web-anwendungen-mit-plain-html?iframe=no">Turbo powered Web Apps - moderne Web Anwendungen mit plain HTML</a>
+    auf <a href="https://jcon.one/">JCON 2021</a>
+        <div class="tags">
+            <span class="tag tag-2">vortrag</span>
+        </div>
+    </dd>
     <dt>09/2021</dt>
     <dd><a href="https://javaforumnord.de/">Java to Go – Google Go für Java-Entwickler</a>
     auf <a href="https://javaforumnord.de/">JavaForum Nord 2021</a>
