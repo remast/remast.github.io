@@ -5,15 +5,20 @@ author = "Jan Stamer"
 theme = "remast"
 [menu]
   [[menu.main]]
-    name = "home"
-    pre = "home"
-    url = "/"
+    name = "Vorträge"
+    pre = "talks"
+    url = "/talks/"
     weight = 1
   [[menu.main]]
-    name = "posts"
-    pre = "posts"
-    url = "/posts/"
+    name = "Artikel"
+    pre = "articles"
+    url = "/articles/"
     weight = 2
+  [[menu.main]]
+    name = "Blog"
+    pre = "Blog"
+    url = "/posts/"
+    weight = 3
 [markup.goldmark.renderer]
   unsafe= true
 [params]

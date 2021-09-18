@@ -22,6 +22,10 @@ body {
     color: #C8B411
 }
 
+#hero h1 a {
+    color: #fff;
+}
+
 .social a {
     color: #C8B411;
     padding: 0.3em;
@@ -71,13 +75,16 @@ p {
 
 nav {
     background-color: #431788;
-    padding: .7em;
-    font-size: 1.2em;
+    padding: 1.1em 0.7em 1.1em 0.7em;
+    font-size: 1.1em;
     margin-top: 1.4em;
 }
 
 nav a {
+    padding-top: .4em;
+    padding-right: .9em;
     color: #C8B411;
+    font-weight: bold;
 }
 
 nav a.active {

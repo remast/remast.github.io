@@ -5,10 +5,11 @@
     <meta name="description" content="{{ .Site.Params.description }}">
 
     <script src="https://kit.fontawesome.com/4c09906fcb.js" async></script>
-    <script src="https://unpkg.com/@hotwired/turbo@7.0.0-beta.5/dist/turbo.es5-umd.js" async></script>
+    <script src="https://unpkg.com/@hotwired/turbo@7.0.0-rc.4/dist/turbo.es5-umd.js" async></script>
 
     <link   rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" media="screen" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=Zilla+Slab:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
     {{ $title := print .Site.Title " | " .Title -}}
     
     {{ if .Params.canonicalUrl -}}
