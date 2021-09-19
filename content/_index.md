@@ -5,11 +5,11 @@ description: "Jan Stamer | Create, Code, Share"
 draft: false
 ---
 
-<div class="row" style="margin: 2em;">
+<div class="row center-xs start-sm start-lg" style="margin: 2em 1em 2em 1em;">
     <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
         <div class="box-row">
-            <p style="font-size: 3em;">Hey, ich bin <b>Jan Stamer</b>!</p>
-            <p style="font-size: 1.8em; margin-right: .5em;">Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor. Leidenschaftlicher Papa und Läufer.</p>
+            <p style="font-size: 3em;">Hey, ich bin <b>Jan</b>!</p>
+            <p style="font-size: 1.8em; margin-right: .5em;">Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teile mein Wissen als Speaker und Autor. Leidenschaftlicher Papa und Läufer.</p>
         </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
