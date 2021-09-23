@@ -1,7 +1,7 @@
 ---
-title: "Artikel2"
+title: "Vorträge"
 date: 2021-09-01T23:11:13Z
-description: "Jan Stamer | Artikel"
+description: "Jan Stamer | Vorträge"
 draft: false
 ---
 
