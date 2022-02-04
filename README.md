@@ -2,6 +2,10 @@
 
 # Artikel
 
+## 2022
+
+* 03/2023 Webentwicklung mit Go für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+
 ## 2020
 
 * 09/2020 [Buchrezension: Go – Das Praxisbuch ](https://www.heise.de/hintergrund/Buchrezension-Go-Das-Praxisbuch-4888936.html) für [heise online](https://www.heise.de/)

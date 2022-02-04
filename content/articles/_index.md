@@ -5,6 +5,13 @@ description: "Jan Stamer | Artikel"
 draft: false
 ---
 
+<h2>2022</h2>
+<dl>
+    <dt>03/2022</dt>
+    <dd>
+        Webentwicklung mit Go für <a href="https://entwickler.de/entwickler-magazin">Entwickler Magazin</a>
+    </dd>
+</dl>
 <h2>2020</h2>
 <dl>
     <dt>04/2020</dt>
