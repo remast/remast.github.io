@@ -27,7 +27,7 @@ func TestUserRepository(t *testing.T) {
 	}
 	defer dbContainer.Terminate(context.Background())
 
-	// Create db user repository
+	// Create user repository
 	userRepository := NewUserRepository(connPool)
 
 	// Run tests against db
@@ -54,10 +54,12 @@ func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool, error) {
 			"POSTGRES_USER":     "postgres",
 		},
 	}
-	dbContainer, err := testcontainers.GenericContainer(context.Background(), testcontainers.GenericContainerRequest{
-		ContainerRequest: req,
-		Started:          true,
-	})
+	dbContainer, err := testcontainers.GenericContainer(
+		context.Background(),
+		testcontainers.GenericContainerRequest{
+			ContainerRequest: req,
+			Started:          true,
+		})
 	if err != nil {
 		return nil, nil, err
 	}
@@ -70,7 +72,7 @@ func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool, error) {
 		return nil, nil, err
 	}
 
-	dbURI := fmt.Sprintf("postgres://postgres:postgres@%v:%v/baralga", host, port.Port())
+	dbURI := fmt.Sprintf("postgres://postgres:postgres@%v:%v/testdb", host, port.Port())
 	err = MigrateDb(dbURI)
 	if err != nil {
 		return nil, nil, err
