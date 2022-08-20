@@ -28,11 +28,11 @@ func TestUserRepository(t *testing.T) {
 	defer dbContainer.Terminate(context.Background())
 
 	// Create user repository
-	userRepository := NewUserRepository(connPool)
+	repository := NewUserRepository(connPool)
 
 	// Run tests against db
 	t.Run("FindExistingUserByUsername", func(t *testing.T) {
-		adminUser, err := userRepository.FindByUsername(
+		adminUser, err := repository.FindByUsername(
 			context.Background(),
 			"admin",
 		)
@@ -44,8 +44,8 @@ func TestUserRepository(t *testing.T) {
 }
 
 func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool, error) {
-	req := testcontainers.ContainerRequest{
-		Image:        "postgres:14",
+	containerReq := testcontainers.ContainerRequest{
+		Image:        "postgres:latest",
 		ExposedPorts: []string{"5432/tcp"},
 		WaitingFor:   wait.ForListeningPort("5432/tcp"),
 		Env: map[string]string{
@@ -57,7 +57,7 @@ func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool, error) {
 	dbContainer, err := testcontainers.GenericContainer(
 		context.Background(),
 		testcontainers.GenericContainerRequest{
-			ContainerRequest: req,
+			ContainerRequest: containerReq,
 			Started:          true,
 		})
 	if err != nil {
