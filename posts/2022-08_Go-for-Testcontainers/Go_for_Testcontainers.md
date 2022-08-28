@@ -84,11 +84,11 @@ Notice that we make sure the PostgreSQL container is terminated after our integr
 
 So far our test starts out with an empty database. That's not very useful since we need the database tables of our application. In our simple example we need the table `users`. We will now set up our database using [golang-migrate](https://github.com/golang-migrate/migrate).
 
-We add the database migrations to the `SetupTestDatabase()` method.
+We add the database migrations to the `SetupTestDatabase()` method by adding the call `MigrateDb(dbURI)`.
 
 ```go
 func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool) {
-	// ....
+	// ... (see before)
 
 	// 3.2 Create db connection string and connect
 	dbURI := fmt.Sprintf("postgres://postgres:postgres@%v:%v/testdb", host, port.Port())
@@ -99,8 +99,29 @@ func SetupTestDatabase() (testcontainers.Container, *pgxpool.Pool) {
 }
 ```
 
-## Wrap Upa
+The method `MigrateDb(dbURI)` applies the database migration scripts to the database using [golang-migrate](https://github.com/golang-migrate/migrate). The migration scripts are read from the directory `migrations` which is embedded into the binary of our application.
 
-We now have a working setup for integration tests against a PostgreSQL database running in docker. We can use this setup in integration tests for our persistence layer.
+```go
+//go:embed migrations
+var migrations embed.FS
 
-This is also a great start to set up other integration tests that need infrastructure. E.g. a test that send emails to an mail server running in docker, as in [mail_resource_smtp_test.go](https://github.com/Baralga/baralga-app/blob/main/shared/mail_resource_smtp_test.go).
+func MigrateDb(dbURI string) error {
+	source, _ := iofs.New(migrations, "migrations")
+
+	m, _ := migrate.NewWithSourceInstance("iofs", source, strings.Replace(dbURI, "postgres://", "pgx://", 1))
+	defer m.Close()
+
+	err = m.Up()
+	if err != nil && !errors.Is(err, migrate.ErrNoChange) {
+		return err
+	}
+
+	return nil
+}
+```
+
+## Wrap Up
+
+We have a working setup for integration tests against a real PostgreSQL database running in Docker. We can use this setup for integration tests of our persistence layer. But that's not all it's good for.
+
+This setup is a great way for all kinds of integration tests that need infrastructure. E.g. a test that send emails to an mail server running in docker, as in [mail_resource_smtp_test.go](https://github.com/Baralga/baralga-app/blob/main/shared/mail_resource_smtp_test.go).
