@@ -5,7 +5,7 @@ description: How do you test your Go application is working properly with a real
 tags: go, beginners
 date: 2022-08-29T12:11:13Z
 draft: false
-canonicalUrl: "https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg"
+canonicalUrl: "https://dev.to/remast/go-integration-tests-using-testcontainers-9o5"
 # Use a ratio of 100:42 for best results.
 ---
 
