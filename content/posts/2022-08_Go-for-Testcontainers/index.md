@@ -9,8 +9,6 @@ canonicalUrl: "https://dev.to/remast/go-integration-tests-using-testcontainers-9
 # Use a ratio of 100:42 for best results.
 ---
 
-# Go Integration Tests using Testcontainers
-
 Your application uses a database like PostgreSQL? So how do you test your persistence layer to ensure it's working properly with a real [PostgreSQL](https://www.postgresql.org/) database? Right, you need to test against a real PostgreSQL. Since that test requires external infrastructure it's an _integration test_. You'll learn now how easy it is to write integration tests for external infrastructure using [Testcontainers](https://golang.testcontainers.org/) and [Docker](https://www.docker.com/).
 
 ## Integration Test Setup
