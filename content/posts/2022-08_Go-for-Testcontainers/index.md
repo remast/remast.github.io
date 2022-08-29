@@ -1,6 +1,17 @@
+---
+title: Go Integration Tests using Testcontainers
+published: true
+description: How do you test your Go application is working properly with a real PostgreSQL database? Right, you need to test against a real db. You'll learn how easy it is to write integration tests for your Go application using Testcontainers and Docker.
+tags: go, beginners
+date: 2022-08-29T12:11:13Z
+draft: false
+canonicalUrl: "https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg"
+# Use a ratio of 100:42 for best results.
+---
+
 # Go Integration Tests using Testcontainers
 
-Your application uses a database like PostgreSQL? So how do you test your persistence layer to ensure it's working properly with a real [PostgreSQL](https://www.postgresql.org/) database? Right, you need a test against a real PostgreSQL. Since that test requires external infrastructure it's an _integration test_. You'll learn now how easy it is to write integration tests for external infrastructure using [Testcontainers](https://golang.testcontainers.org/) and [Docker](https://www.docker.com/).
+Your application uses a database like PostgreSQL? So how do you test your persistence layer to ensure it's working properly with a real [PostgreSQL](https://www.postgresql.org/) database? Right, you need to test against a real PostgreSQL. Since that test requires external infrastructure it's an _integration test_. You'll learn now how easy it is to write integration tests for external infrastructure using [Testcontainers](https://golang.testcontainers.org/) and [Docker](https://www.docker.com/).
 
 ## Integration Test Setup
 
@@ -32,7 +43,7 @@ func TestUserRepository(t *testing.T) {
 
 First the database is set up. Then a new `UserRepository` is created for the test with a reference to the connection pool of the database `connPool`. No we run the method to test `userRepository.FindByUsername(ctx, "admin")` and verify the result. But wait, where did that database container come from? Right, we'll set that up using [Testcontainers](https://golang.testcontainers.org/) and [Docker](https://www.docker.com/).
 
-## Database Setup with Testcontainers
+## Database Setup using Testcontainers
 
 We set up the [PostgreSQL](https://www.postgresql.org/) database in a [Docker](https://www.docker.com/) container using the [Testcontainers](https://golang.testcontainers.org/) lib.
 
@@ -122,6 +133,8 @@ func MigrateDb(dbURI string) error {
 
 ## Wrap Up
 
-We have a working setup for integration tests against a real PostgreSQL database running in Docker. We can use this setup for integration tests of our persistence layer. But that's not all it's good for.
+We have a working setup for integration tests against a real [PostgreSQL](https://www.postgresql.org/) database running in [Docker](https://www.docker.com/) using [Testcontainers](https://golang.testcontainers.org/). We can use this setup for integration tests of our persistence layer. But that's not all it's good for.
 
 This setup is a great way for all kinds of integration tests that need infrastructure. E.g. a test that send emails to an mail server running in docker, as in [mail_resource_smtp_test.go](https://github.com/Baralga/baralga-app/blob/main/shared/mail_resource_smtp_test.go).
+
+Code see [github.com/remast/go-for-testcontainers](https://github.com/remast/go-for-testcontainers)
