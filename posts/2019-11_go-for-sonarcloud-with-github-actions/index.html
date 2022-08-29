@@ -1,217 +1,148 @@
-<!doctype html><html lang=de>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Jan Stamer - Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor.">
-<script src=https://kit.fontawesome.com/4c09906fcb.js async></script>
+<!doctype html><html lang=de><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Jan Stamer - Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor."><script src=https://kit.fontawesome.com/4c09906fcb.js async></script>
 <script src=/turbo-7.1.0.es2017-umd.min.js async></script>
-<link rel=stylesheet href=https://remast.github.io/css/style.min.10e5cf2701424b4bdfdcaa5c67a67eba0c9884019e4752e9a95e3a860cb39426.css integrity="sha256-EOXPJwFCS0vf3KpcZ6Z+ugyYhAGeR1LpqV46hgyzlCY=" media=screen>
-<link rel=stylesheet href=/flexboxgrid-6.3.1.min.css type=text/css>
-<link rel=canonical href=https://dev.to/remast/go-for-sonarcloud-with-github-actions-3pmn>
-<meta property="og:title" content="Go for SonarCloud with Github Actions">
-<meta property="og:description" content="Learn the basics of analyzing a Go project with SonarQube in my post Go for SonarQube. In this post I&rsquo;ll show you how to use Github Actions to analyze your Go project with SonarCloud. SonarCloud offers SonarQube as a service.
+<link rel=stylesheet href=https://remast.github.io/css/style.min.10e5cf2701424b4bdfdcaa5c67a67eba0c9884019e4752e9a95e3a860cb39426.css integrity="sha256-EOXPJwFCS0vf3KpcZ6Z+ugyYhAGeR1LpqV46hgyzlCY=" media=screen><link rel=stylesheet href=/flexboxgrid-6.3.1.min.css type=text/css><link rel=canonical href=https://dev.to/remast/go-for-sonarcloud-with-github-actions-3pmn><meta property="og:title" content="Go for SonarCloud with Github Actions"><meta property="og:description" content="Learn the basics of analyzing a Go project with SonarQube in my post Go for SonarQube. In this post I&rsquo;ll show you how to use Github Actions to analyze your Go project with SonarCloud. SonarCloud offers SonarQube as a service.
 {% link remast/go-for-sonarqube-4iho %}
-Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://remast.github.io/posts/2019-11_go-for-sonarcloud-with-github-actions/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2019-11-01T23:11:13+00:00">
-<meta property="article:modified_time" content="2019-11-01T23:11:13+00:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Go for SonarCloud with Github Actions">
-<meta name=twitter:description content="Learn the basics of analyzing a Go project with SonarQube in my post Go for SonarQube. In this post I&rsquo;ll show you how to use Github Actions to analyze your Go project with SonarCloud. SonarCloud offers SonarQube as a service.
+Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time."><meta property="og:type" content="article"><meta property="og:url" content="https://remast.github.io/posts/2019-11_go-for-sonarcloud-with-github-actions/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-11-01T23:11:13+00:00"><meta property="article:modified_time" content="2019-11-01T23:11:13+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Go for SonarCloud with Github Actions"><meta name=twitter:description content="Learn the basics of analyzing a Go project with SonarQube in my post Go for SonarQube. In this post I&rsquo;ll show you how to use Github Actions to analyze your Go project with SonarCloud. SonarCloud offers SonarQube as a service.
 {% link remast/go-for-sonarqube-4iho %}
-Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time.">
-<meta name=twitter:creator content="jsTamer21k">
-<title>>_ Jan Stamer | Go for SonarCloud with Github Actions</title>
-</head><body><div id=hero>
-<h1 class=title><a href=/>Jan Stamer</a></h1>
-<div class=social>
-<a href=https://twitter.com/jsTamer21k><i class="fab fa-twitter"></i></a>
+Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time."><meta name=twitter:creator content="jsTamer21k"><title>>_ Jan Stamer | Go for SonarCloud with Github Actions</title></head><body><div id=hero><h1 class=title><a href=/>Jan Stamer</a></h1><div class=social><a href=https://twitter.com/jsTamer21k><i class="fab fa-twitter"></i></a>
 <a href=https://www.linkedin.com/in/jan-stamer><i class="fab fa-linkedin-in"></i></a>
 <a href=https://www.xing.com/profile/Jan_Stamer><i class="fab fa-xing"></i></a>
 <a href=https://github.com/remast/><i class="fab fa-github"></i></a>
-<a href=https://dev.to/remast><i class="fab fa-dev"></i></a>
-</div>
-</div>
-<nav id=nav>
-<a href=/talks/ title>Vorträge</a>
+<a href=https://dev.to/remast><i class="fab fa-dev"></i></a></div></div><nav id=nav><a href=/talks/ title>Vorträge</a>
 <a href=/articles/ title>Artikel</a>
-<a href=/posts/ title>Blog</a>
-</nav><div id=content>
-<h1>Go for SonarCloud with Github Actions</h1>
-<time datetime=2019-11-01>11/2019</time>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"NewsArticle","headline":"Go for SonarCloud with Github Actions","author.name":"Jan Stamer","datePublished":"2019-11-01","dateModified":"2019-11-01"}</script>
-<article>
-<p>Learn the basics of analyzing a Go project with SonarQube in my post <a href=https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a>Go for SonarQube</a>. In this post I&rsquo;ll show you how to use <a href>Github Actions</a> to analyze your Go project with <a href=https://sonarcloud.io>SonarCloud</a>. SonarCloud offers SonarQube as a service.</p>
-<p>{% link remast/go-for-sonarqube-4iho %}</p>
-<p>Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time. Since SonarQube natively supports Go it&rsquo;s a great fit to calculate metrics fo your Go project.</p>
-<h2 id=set-up-a-build-with-github-actions>Set up a Build with Github Actions</h2>
-<p>We start by setting up a basic build pipeline for our Go project using <a href=https://github.com/features/actions>Github Actions</a>. We use the Github&rsquo;s official Go action <a href=https://github.com/actions/setup-go>setup-go</a> for our build. So we create our pipeline for Github Actions in the file <code>.github/workflows/build.yml</code> with the following content:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
-<span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
-<span style=color:#f92672>jobs</span>:
-  <span style=color:#f92672>build</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build, Test and Analyze</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Go</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and Test</span>
-        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
-</code></pre></div><p>Now Github runs our pipeline on every push to the git repository. The pipeline set&rsquo;s up an Go environment, clones the repository and finally builds and tests with <code>make test</code>. The tests also calculate the code coverage of the tests and save it in <code>bin/cov.out</code>.</p>
-<h2 id=run-the-sonarcloud-analysis-as-step>Run the SonarCloud Analysis as Step</h2>
-<p>Now we can add the SonarCloud analysis as step in our pipeline using the <a href=https://github.com/SonarSource/sonarcloud-github-action>sonarcloud-github-action</a>. But before that you need to register for SonarCloud. You can use your Github account to sign up.</p>
-<p>The step to add the SonarCloud analysis is:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
-        <span style=color:#f92672>env</span>:
-          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
-          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
-</code></pre></div><p>The step analyzes our Go code using the <a href=https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/>sonar-scanner tool</a>.</p>
-<p>The SonarCloud Action needs two environment variables. The first one is <code>GITHUB_TOKEN</code> which is already provided by Github (see <a href=https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions>Virtual environments for GitHub Actions</a>). The second one is the <code>SONAR_TOKEN</code> to authenticate the Github Action with SonarCloud.</p>
-<p>To generate the access token <code>SONAR_TOKEN</code> log into SonarCloud. Now click on your profile and then go to &lsquo;My Account&rsquo; and then &lsquo;Security&rsquo;. Or go directly to <a href=https://sonarcloud.io/account/security/>account/security</a>. Generate your access token for SonarCloud here. The access token is provided to the build pipeline as a secret environment variable. Go to your repository settings in Github. Then to &lsquo;Secrets&rsquo; and add a new secret with name <code>SONAR_TOKEN</code> and use the generated SonarCloud access token as value, as shown below.</p>
-<p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/github-action-secrets.png alt="Github Repostory Secrets"></p>
-<p>Our new pipeline to build, test and analyze the source code with SonarCloud is shown below.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
-<span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
-<span style=color:#f92672>jobs</span>:
-  <span style=color:#f92672>build</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build, Test and Analyze</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Go</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and Test</span>
-        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
-        <span style=color:#f92672>env</span>:
-          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
-          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
-</code></pre></div><h2 id=add-code-coverage-to-sonarcloud>Add Code Coverage to SonarCloud</h2>
-<p>SonarCloud is able to analyze our source code. Yet it&rsquo;s not able to pick up the code coverage of our tests which is stored in the file <code>bin/cov.out</code>. And this is a bit tricky. The sonar-scanner looks for the code coverage in file <code>/home/runner/work/service_sonar/service_sonar/bin/cov.out</code>. That&rsquo;s where it is after the tests. The problem is the sonar-scanner tool is executed with docker and mounts the current directory as a volume like <code>docker run --workdir /github/workspace [...] -v "/home/runner/work/service_sonar/service_sonar":"/github/workspace"</code>. Within the docker run there is no file <code>/home/runner/work/service_sonar/service_sonar/bin/cov.out</code> but the path of that file within docker is actually <code>/github/workspace/bin/cov.out</code>. So we need to use that path as <code>sonar.go.coverage.reportPaths</code> in the SonarQube settings file <code>sonar-project.properties</code>. The full <code>sonar-project.properties</code> for Github Actions are shown below:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=color:#75715e># Github organization linked to sonarcloud</span>
-sonar.organization<span style=color:#f92672>=</span>remast
-
-<span style=color:#75715e># Project key from sonarcloud dashboard for Github Action, otherwise pick a project key you like</span>
-sonar.projectKey<span style=color:#f92672>=</span>de.red6:service_sonar
-
-sonar.projectName<span style=color:#f92672>=</span>service_sonar
-sonar.projectVersion<span style=color:#f92672>=</span>1.0.0
-
-sonar.sources<span style=color:#f92672>=</span>.
-sonar.exclusions<span style=color:#f92672>=</span>**/*_test.go,**/vendor/**,**/testdata/*
- 
-sonar.tests<span style=color:#f92672>=</span>.
-sonar.test.inclusions<span style=color:#f92672>=</span>**/*_test.go
-sonar.test.exclusions<span style=color:#f92672>=</span>**/vendor/**
-sonar.go.coverage.reportPaths<span style=color:#f92672>=</span>/github/workspace/bin/cov.out
-</code></pre></div><p>A live example of the pipeline can be found at <a href=https://github.com/remast/service_sonar/tree/feature/gh-pipeline-simplify>service_sonar</a> (branch <code>feature/gh-pipeline-simplify</code>).</p>
-<h2 id=our-project-in-the-sonarcloud-dashboard>Our project in the SonarCloud Dashboard</h2>
-<p>After the first SonarCloud analysis you can see the results on the SonarCloud project dashboard shown below.</p>
-<p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/go-sonarcloud-dashboard.png alt="SonarCloud Dashboard"></p>
-<p>Check out dashboard of the sample project at <a href="https://sonarcloud.io/dashboard?id=de.red6%3Aservice_sonar">https://sonarcloud.io/dashboard?id=de.red6%3Aservice_sonar</a>.</p>
-<h2 id=run-the-sonarcloud-analysis-as-job>Run the SonarCloud Analysis as Job</h2>
-<p>Currently our pipeline has two main steps. The first step is build and test and the second step is the SonarCloud analysis. In big projects the SonarClould analysis can take up to several minutes. Since steps are executed synchronously one after the other the pipeline can only continue once SonarCloud is done analyzing. But what about our integration tests? Say we want to run some integration tests after the build. We want to give feedback about the integration tests as soon as possible. This means we don&rsquo;t want to wait for the SonarCloud analysis but proceed to the integration tests right after build and test. This is easily possible if we separate out the SonarCloud analysis as a separate job.</p>
-<p>Github Actions runs jobs in a workflow in parallel. So we can split our pipeline in three jobs. The first job is build and test. Then we have a second job to for the SonarCloud analysis and a third job that runs the integration tests. The job to build and test has to run first. After that both the job for the SonarCloud analysis and the integration tests can run in parallel.</p>
-<h3 id=first-pipeline-draft>First pipeline draft</h3>
-<p>The first draft of our improved pipeline shown below. It has the three jobs <code>build</code>, <code>sonarCloudTrigger</code> and <code>integrationTest</code>. The jobs <code>sonarCloudTrigger</code> and <code>integrationTest</code> both depend on the job build which is declared with <code>needs: build</code>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
-<span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
-<span style=color:#f92672>jobs</span>:
-  <span style=color:#f92672>build</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Compile and Test</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup go</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
-      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
-
-  <span style=color:#f92672>sonarCloudTrigger</span>:
-    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud Trigger</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
-        <span style=color:#f92672>env</span>:
-          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
-          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
-
-  <span style=color:#f92672>integrationTest</span>:
-    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Integration Test</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo Should run integration tests.</span>
-</code></pre></div><p>The pipeline is executed the way we wanted. The job <code>build</code> runs first and after that <code>sonarCloudTrigger</code> and <code>integrationTest</code> run in parallel. It has only one flaw though. Do you see it? If you check the logs you will notice that SonarCloud is not able to read the code coverage of the unit tests. SonarCloud looks for the code coverage in the file <code>bin/cov.out</code>. This file is only present in the <code>build</code> job but not in the job <code>sonarCloudTrigger</code>. So we need to transfer the file from one job to the other.</p>
-<h2 id=revised-pipeline-with-code-coverage>Revised pipeline with Code Coverage</h2>
-<p>To transfer the file <code>bin/cov.out</code> from the <code>build</code> job to the <code>sonarCloudTriggerJob</code> we&rsquo;ll use the actions <a href=https://github.com/actions/upload-artifact>upload-artifact</a> and <a href=https://github.com/actions/download-artifact>download-artifact</a>. We add the action <code>upload-artifact</code> to the <code>build</code> job and <code>download-artifact</code> to the <code>sonarCloudTriggerJob</code> job like below:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
-<span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
-<span style=color:#f92672>jobs</span>:
-  <span style=color:#f92672>build</span>:
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Compile and Test</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup go</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
-      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Archive code coverage results</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/upload-artifact@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>code-coverage-report</span>
-          <span style=color:#f92672>path</span>: <span style=color:#ae81ff>bin</span>
-
-  <span style=color:#f92672>sonarCloudTrigger</span>:
-    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud Trigger</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Download code coverage results</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/download-artifact@v1</span>
-        <span style=color:#f92672>with</span>:
-          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>code-coverage-report</span>
-          <span style=color:#f92672>path</span>: <span style=color:#ae81ff>bin</span>
-      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
-        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
-        <span style=color:#f92672>env</span>:
-          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
-          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
-
-  <span style=color:#f92672>integrationTest</span>:
-    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
-    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Integration Test</span>
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
-    <span style=color:#f92672>steps</span>:
-      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo Should run integration tests.</span>
-</code></pre></div><p>A live example of the pipeline can be found at <a href=https://github.com/remast/service_sonar/tree/master>service_sonar</a> (branch <code>master</code>).</p>
-<h2 id=add-a-sonarcloud-badge>Add a SonarCloud Badge</h2>
-<p>We can add a SonarCloud badge to our project to quickly show the SonarCloud status of our project from within the readme. To create SonarCloud badge go to your SonarCloud project dashboard and click &lsquo;Get project badges&rsquo;. You can choose between three badges as shown below.</p>
-<p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/sonarcloud-badges.png alt="SonarCloud Badges"></p>
-<h2 id=wrap-up>Wrap Up</h2>
-<p>Now you have learned how to analyse Go code using SonarCloud from a Github Action pipeline. By using a separate job for the SonarCloud analysis we are able to run the time-consuming analysis in parallel to other important tasks like integration tests or deployment.</p>
-<p>All code is provided as a running example in the Github project <a href=https://github.com/remast/service_sonar>service_sonar</a>.</p>
-</article>
-</div></body>
-</html>
+<a href=/posts/ title>Blog</a></nav><div id=content><h1>Go for SonarCloud with Github Actions</h1><time datetime=2019-11-01>11/2019</time>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"NewsArticle","headline":"Go for SonarCloud with Github Actions","author.name":"Jan Stamer","datePublished":"2019-11-01","dateModified":"2019-11-01"}</script><article><p>Learn the basics of analyzing a Go project with SonarQube in my post <a href=https://medium.com/red6-es/go-for-sonarqube-ffff5b74f33a>Go for SonarQube</a>. In this post I&rsquo;ll show you how to use <a href>Github Actions</a> to analyze your Go project with <a href=https://sonarcloud.io>SonarCloud</a>. SonarCloud offers SonarQube as a service.</p><p>{% link remast/go-for-sonarqube-4iho %}</p><p>Metrics like lines of code or test coverage are great to track and improve the quality of your source code. SonarQube can calculate these metrics for your project and track how they evolve over time. Since SonarQube natively supports Go it&rsquo;s a great fit to calculate metrics fo your Go project.</p><h2 id=set-up-a-build-with-github-actions>Set up a Build with Github Actions</h2><p>We start by setting up a basic build pipeline for our Go project using <a href=https://github.com/features/actions>Github Actions</a>. We use the Github&rsquo;s official Go action <a href=https://github.com/actions/setup-go>setup-go</a> for our build. So we create our pipeline for Github Actions in the file <code>.github/workflows/build.yml</code> with the following content:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build, Test and Analyze</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Go</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and Test</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
+</span></span></code></pre></div><p>Now Github runs our pipeline on every push to the git repository. The pipeline set&rsquo;s up an Go environment, clones the repository and finally builds and tests with <code>make test</code>. The tests also calculate the code coverage of the tests and save it in <code>bin/cov.out</code>.</p><h2 id=run-the-sonarcloud-analysis-as-step>Run the SonarCloud Analysis as Step</h2><p>Now we can add the SonarCloud analysis as step in our pipeline using the <a href=https://github.com/SonarSource/sonarcloud-github-action>sonarcloud-github-action</a>. But before that you need to register for SonarCloud. You can use your Github account to sign up.</p><p>The step to add the SonarCloud analysis is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
+</span></span></code></pre></div><p>The step analyzes our Go code using the <a href=https://docs.sonarqube.org/latest/analysis/scan/sonarscanner/>sonar-scanner tool</a>.</p><p>The SonarCloud Action needs two environment variables. The first one is <code>GITHUB_TOKEN</code> which is already provided by Github (see <a href=https://help.github.com/en/github/automating-your-workflow-with-github-actions/virtual-environments-for-github-actions>Virtual environments for GitHub Actions</a>). The second one is the <code>SONAR_TOKEN</code> to authenticate the Github Action with SonarCloud.</p><p>To generate the access token <code>SONAR_TOKEN</code> log into SonarCloud. Now click on your profile and then go to &lsquo;My Account&rsquo; and then &lsquo;Security&rsquo;. Or go directly to <a href=https://sonarcloud.io/account/security/>account/security</a>. Generate your access token for SonarCloud here. The access token is provided to the build pipeline as a secret environment variable. Go to your repository settings in Github. Then to &lsquo;Secrets&rsquo; and add a new secret with name <code>SONAR_TOKEN</code> and use the generated SonarCloud access token as value, as shown below.</p><p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/github-action-secrets.png alt="Github Repostory Secrets"></p><p>Our new pipeline to build, test and analyze the source code with SonarCloud is shown below.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build, Test and Analyze</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup Go</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Build and Test</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
+</span></span></code></pre></div><h2 id=add-code-coverage-to-sonarcloud>Add Code Coverage to SonarCloud</h2><p>SonarCloud is able to analyze our source code. Yet it&rsquo;s not able to pick up the code coverage of our tests which is stored in the file <code>bin/cov.out</code>. And this is a bit tricky. The sonar-scanner looks for the code coverage in file <code>/home/runner/work/service_sonar/service_sonar/bin/cov.out</code>. That&rsquo;s where it is after the tests. The problem is the sonar-scanner tool is executed with docker and mounts the current directory as a volume like <code>docker run --workdir /github/workspace [...] -v "/home/runner/work/service_sonar/service_sonar":"/github/workspace"</code>. Within the docker run there is no file <code>/home/runner/work/service_sonar/service_sonar/bin/cov.out</code> but the path of that file within docker is actually <code>/github/workspace/bin/cov.out</code>. So we need to use that path as <code>sonar.go.coverage.reportPaths</code> in the SonarQube settings file <code>sonar-project.properties</code>. The full <code>sonar-project.properties</code> for Github Actions are shown below:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Github organization linked to sonarcloud</span>
+</span></span><span style=display:flex><span>sonar.organization<span style=color:#f92672>=</span>remast
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Project key from sonarcloud dashboard for Github Action, otherwise pick a project key you like</span>
+</span></span><span style=display:flex><span>sonar.projectKey<span style=color:#f92672>=</span>de.red6:service_sonar
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sonar.projectName<span style=color:#f92672>=</span>service_sonar
+</span></span><span style=display:flex><span>sonar.projectVersion<span style=color:#f92672>=</span>1.0.0
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>sonar.sources<span style=color:#f92672>=</span>.
+</span></span><span style=display:flex><span>sonar.exclusions<span style=color:#f92672>=</span>**/*_test.go,**/vendor/**,**/testdata/*
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>sonar.tests<span style=color:#f92672>=</span>.
+</span></span><span style=display:flex><span>sonar.test.inclusions<span style=color:#f92672>=</span>**/*_test.go
+</span></span><span style=display:flex><span>sonar.test.exclusions<span style=color:#f92672>=</span>**/vendor/**
+</span></span><span style=display:flex><span>sonar.go.coverage.reportPaths<span style=color:#f92672>=</span>/github/workspace/bin/cov.out
+</span></span></code></pre></div><p>A live example of the pipeline can be found at <a href=https://github.com/remast/service_sonar/tree/feature/gh-pipeline-simplify>service_sonar</a> (branch <code>feature/gh-pipeline-simplify</code>).</p><h2 id=our-project-in-the-sonarcloud-dashboard>Our project in the SonarCloud Dashboard</h2><p>After the first SonarCloud analysis you can see the results on the SonarCloud project dashboard shown below.</p><p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/go-sonarcloud-dashboard.png alt="SonarCloud Dashboard"></p><p>Check out dashboard of the sample project at <a href="https://sonarcloud.io/dashboard?id=de.red6%3Aservice_sonar">https://sonarcloud.io/dashboard?id=de.red6%3Aservice_sonar</a>.</p><h2 id=run-the-sonarcloud-analysis-as-job>Run the SonarCloud Analysis as Job</h2><p>Currently our pipeline has two main steps. The first step is build and test and the second step is the SonarCloud analysis. In big projects the SonarClould analysis can take up to several minutes. Since steps are executed synchronously one after the other the pipeline can only continue once SonarCloud is done analyzing. But what about our integration tests? Say we want to run some integration tests after the build. We want to give feedback about the integration tests as soon as possible. This means we don&rsquo;t want to wait for the SonarCloud analysis but proceed to the integration tests right after build and test. This is easily possible if we separate out the SonarCloud analysis as a separate job.</p><p>Github Actions runs jobs in a workflow in parallel. So we can split our pipeline in three jobs. The first job is build and test. Then we have a second job to for the SonarCloud analysis and a third job that runs the integration tests. The job to build and test has to run first. After that both the job for the SonarCloud analysis and the integration tests can run in parallel.</p><h3 id=first-pipeline-draft>First pipeline draft</h3><p>The first draft of our improved pipeline shown below. It has the three jobs <code>build</code>, <code>sonarCloudTrigger</code> and <code>integrationTest</code>. The jobs <code>sonarCloudTrigger</code> and <code>integrationTest</code> both depend on the job build which is declared with <code>needs: build</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Compile and Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup go</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>sonarCloudTrigger</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud Trigger</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>integrationTest</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Integration Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo Should run integration tests.</span>
+</span></span></code></pre></div><p>The pipeline is executed the way we wanted. The job <code>build</code> runs first and after that <code>sonarCloudTrigger</code> and <code>integrationTest</code> run in parallel. It has only one flaw though. Do you see it? If you check the logs you will notice that SonarCloud is not able to read the code coverage of the unit tests. SonarCloud looks for the code coverage in the file <code>bin/cov.out</code>. This file is only present in the <code>build</code> job but not in the job <code>sonarCloudTrigger</code>. So we need to transfer the file from one job to the other.</p><h2 id=revised-pipeline-with-code-coverage>Revised pipeline with Code Coverage</h2><p>To transfer the file <code>bin/cov.out</code> from the <code>build</code> job to the <code>sonarCloudTriggerJob</code> we&rsquo;ll use the actions <a href=https://github.com/actions/upload-artifact>upload-artifact</a> and <a href=https://github.com/actions/download-artifact>download-artifact</a>. We add the action <code>upload-artifact</code> to the <code>build</code> job and <code>download-artifact</code> to the <code>sonarCloudTriggerJob</code> job like below:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>on</span>: <span style=color:#ae81ff>push</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>Main Workflow</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Compile and Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Setup go</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-go@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>go-version</span>: <span style=color:#e6db74>&#39;1.13&#39;</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>make test</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Archive code coverage results</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/upload-artifact@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>code-coverage-report</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>path</span>: <span style=color:#ae81ff>bin</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>sonarCloudTrigger</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud Trigger</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Clone Repository</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@master</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Download code coverage results</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/download-artifact@v1</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>name</span>: <span style=color:#ae81ff>code-coverage-report</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>path</span>: <span style=color:#ae81ff>bin</span>
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>sonarsource/sonarcloud-github-action@master</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>          <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>integrationTest</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>needs</span>: <span style=color:#ae81ff>build</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Integration Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-latest</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#f92672>run</span>: <span style=color:#ae81ff>echo Should run integration tests.</span>
+</span></span></code></pre></div><p>A live example of the pipeline can be found at <a href=https://github.com/remast/service_sonar/tree/master>service_sonar</a> (branch <code>master</code>).</p><h2 id=add-a-sonarcloud-badge>Add a SonarCloud Badge</h2><p>We can add a SonarCloud badge to our project to quickly show the SonarCloud status of our project from within the readme. To create SonarCloud badge go to your SonarCloud project dashboard and click &lsquo;Get project badges&rsquo;. You can choose between three badges as shown below.</p><p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2019-11_Go-for-SonarCloud-with-Github-Actions/sonarcloud-badges.png alt="SonarCloud Badges"></p><h2 id=wrap-up>Wrap Up</h2><p>Now you have learned how to analyse Go code using SonarCloud from a Github Action pipeline. By using a separate job for the SonarCloud analysis we are able to run the time-consuming analysis in parallel to other important tasks like integration tests or deployment.</p><p>All code is provided as a running example in the Github project <a href=https://github.com/remast/service_sonar>service_sonar</a>.</p></article></div></body></html>

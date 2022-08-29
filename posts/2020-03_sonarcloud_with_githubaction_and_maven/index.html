@@ -1,121 +1,61 @@
-<!doctype html><html lang=de>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Jan Stamer - Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor.">
-<script src=https://kit.fontawesome.com/4c09906fcb.js async></script>
+<!doctype html><html lang=de><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Jan Stamer - Coder und Creator von nachhaltigen Lösungen mit Java und Go. Teilt sein Wissen als Speaker und Autor."><script src=https://kit.fontawesome.com/4c09906fcb.js async></script>
 <script src=/turbo-7.1.0.es2017-umd.min.js async></script>
-<link rel=stylesheet href=https://remast.github.io/css/style.min.10e5cf2701424b4bdfdcaa5c67a67eba0c9884019e4752e9a95e3a860cb39426.css integrity="sha256-EOXPJwFCS0vf3KpcZ6Z+ugyYhAGeR1LpqV46hgyzlCY=" media=screen>
-<link rel=stylesheet href=/flexboxgrid-6.3.1.min.css type=text/css>
-<link rel=canonical href=https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg>
-<meta property="og:title" content="Using SonarCloud with Github Actions and Maven">
-<meta property="og:description" content="In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions.
-Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://remast.github.io/posts/2020-03_sonarcloud_with_githubaction_and_maven/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2020-03-01T23:11:13+00:00">
-<meta property="article:modified_time" content="2020-03-01T23:11:13+00:00">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Using SonarCloud with Github Actions and Maven">
-<meta name=twitter:description content="In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions.
-Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions.">
-<meta name=twitter:creator content="jsTamer21k">
-<title>>_ Jan Stamer | Using SonarCloud with Github Actions and Maven</title>
-</head><body><div id=hero>
-<h1 class=title><a href=/>Jan Stamer</a></h1>
-<div class=social>
-<a href=https://twitter.com/jsTamer21k><i class="fab fa-twitter"></i></a>
+<link rel=stylesheet href=https://remast.github.io/css/style.min.10e5cf2701424b4bdfdcaa5c67a67eba0c9884019e4752e9a95e3a860cb39426.css integrity="sha256-EOXPJwFCS0vf3KpcZ6Z+ugyYhAGeR1LpqV46hgyzlCY=" media=screen><link rel=stylesheet href=/flexboxgrid-6.3.1.min.css type=text/css><link rel=canonical href=https://dev.to/remast/using-sonarcloud-with-github-actions-and-maven-31kg><meta property="og:title" content="Using SonarCloud with Github Actions and Maven"><meta property="og:description" content="In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions.
+Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions."><meta property="og:type" content="article"><meta property="og:url" content="https://remast.github.io/posts/2020-03_sonarcloud_with_githubaction_and_maven/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2020-03-01T23:11:13+00:00"><meta property="article:modified_time" content="2020-03-01T23:11:13+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Using SonarCloud with Github Actions and Maven"><meta name=twitter:description content="In this post you will will learn how to analyse your Java Maven project with SonarCloud using Github Actions.
+Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions."><meta name=twitter:creator content="jsTamer21k"><title>>_ Jan Stamer | Using SonarCloud with Github Actions and Maven</title></head><body><div id=hero><h1 class=title><a href=/>Jan Stamer</a></h1><div class=social><a href=https://twitter.com/jsTamer21k><i class="fab fa-twitter"></i></a>
 <a href=https://www.linkedin.com/in/jan-stamer><i class="fab fa-linkedin-in"></i></a>
 <a href=https://www.xing.com/profile/Jan_Stamer><i class="fab fa-xing"></i></a>
 <a href=https://github.com/remast/><i class="fab fa-github"></i></a>
-<a href=https://dev.to/remast><i class="fab fa-dev"></i></a>
-</div>
-</div>
-<nav id=nav>
-<a href=/talks/ title>Vorträge</a>
+<a href=https://dev.to/remast><i class="fab fa-dev"></i></a></div></div><nav id=nav><a href=/talks/ title>Vorträge</a>
 <a href=/articles/ title>Artikel</a>
-<a href=/posts/ title>Blog</a>
-</nav><div id=content>
-<h1>Using SonarCloud with Github Actions and Maven</h1>
-<time datetime=2020-03-01>03/2020</time>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"NewsArticle","headline":"Using SonarCloud with Github Actions and Maven","author.name":"Jan Stamer","datePublished":"2020-03-01","dateModified":"2020-03-01"}</script>
-<article>
-<p>In this post you will will learn how to analyse your Java <a href=https://maven.apache.org/>Maven</a> project with <a href=https://sonarcloud.io/>SonarCloud</a> using <a href=https://github.com/features/actions>Github Actions</a>.</p>
-<p>Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions.</p>
-<h2 id=set-up-sonarcloud>Set up SonarCloud</h2>
-<h3 id=step-1-create-a-project>Step 1: Create a Project</h3>
-<p>In order to use <a href=https://sonarcloud.io/>SonarCloud</a> you need to create an account and set up a project. So first create an account and log in. Now you can create a new project <a href=https://sonarcloud.io/projects/create>here</a> or using the &lsquo;+&rsquo; button. A project in SonarCloud must belong to an organization. SonarCloud automatically imports your Github organizations. So you can use any of your Github organizations or use the default organization by your Github user name.</p>
-<p><img src=SonarCloud_CreateProject.png alt="SonarCloud Create Project"></p>
-<p>After you&rsquo;ve created your project, your project has an organization key and a project key. You&rsquo;ll need both to run an SonarCloud analysis. You can always look up organization key and project key from the dashboard
-of your project like shown below.</p>
-<p><img src=SonarCloud_ProjectKey.png alt="SonarCloud Project Key"></p>
-<h3 id=step-2-generate-a-sonarcloud-token>Step 2: Generate a SonarCloud Token</h3>
-<p>Now we&rsquo;ll set up a secure token as authentication for SonarCloud. Generate a new token from the tab &lsquo;security&rsquo; in your account settings (which is <a href=https://sonarcloud.io/account/security/>here</a>). Make sure to store the token since you&rsquo;ll only see it right after you&rsquo;ve greated it. Now you&rsquo;re all set up to run a first analysis.</p>
-<p><img src=SonarCloud_GenerateToken.png alt="SonarCloud Generate Token"></p>
-<h2 id=run-sonarcloud-analysis-locally-using-maven>Run SonarCloud analysis locally using Maven</h2>
-<p>You can run the SonarCloud analysis using maven. The organization key, project key and the generated token must be passed to the <a href=https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/>Sonar Maven Plugin</a> as well as the url for SonarCloud. Replace <code>&lt;GENERATED_TOKEN></code> with the SonarCloud token you generated in the previous step. So the command is:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>mvn sonar:sonar <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>   -Dsonar.projectKey<span style=color:#f92672>=</span>baralga <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>   -Dsonar.organization<span style=color:#f92672>=</span>baralga <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>   -Dsonar.host.url<span style=color:#f92672>=</span>https://sonarcloud.io <span style=color:#ae81ff>\
-</span><span style=color:#ae81ff></span>   -Dsonar.login<span style=color:#f92672>=</span>&lt;GENERATED_TOKEN&gt;
-</code></pre></div><p>After you ran the analysis the results will shortly be online in the SonarCloud dashboard at <code>https://sonarcloud.io/dashboard?id=&lt;projectKey></code>. The dashboard for our sample project <code>baralga</code> is available at <a href="https://sonarcloud.io/dashboard?id=baralga">https://sonarcloud.io/dashboard?id=baralga</a>.</p>
-<h2 id=run-sonarcloud-analysis-using-github-actions>Run SonarCloud analysis using Github Actions</h2>
-<p>Now we will use Github Actions to run the SonarCloud analysis from our ci pipeline. We&rsquo;ll use Maven for that like we did before. We set up Github Action that runs the SonarClound analysis using Maven. Like before we pass organization key and project key as parameters. Additionally we need to provide the SonarCloud token and the <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token>Github Token</a>.</p>
-<p>The token for SonarCloud is stored as a encrypted secret as described <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets>here</a>. We can access it in our Github Action with <code>${{ secrets.SONAR_TOKEN }}</code>. The <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token>Github Token</a> is already provided by Github Actions itself and we can access it with <code>${{ secrets.GITHUB_TOKEN }}</code>.</p>
-<p>And here&rsquo;s the complete Github Action workflow. Save it in the file <code>.github\workflows\sonar.yml</code> and off you go.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud</span>
-<span style=color:#f92672>on</span>:
-  <span style=color:#f92672>push</span>:
-    <span style=color:#f92672>branches</span>:
-      - <span style=color:#ae81ff>master</span>
-<span style=color:#f92672>jobs</span>:
-  <span style=color:#f92672>build</span>:
-    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-16.04</span>
-    <span style=color:#f92672>steps</span>:
-    - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v1</span>
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Set up JDK</span>
-      <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-java@v1</span>
-      <span style=color:#f92672>with</span>:
-        <span style=color:#f92672>java-version</span>: <span style=color:#e6db74>&#39;11&#39;</span>
-    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
-      <span style=color:#f92672>run</span>: <span style=color:#ae81ff>./mvnw -B verify sonar:sonar -Dsonar.projectKey=baralga -Dsonar.organization=baralga -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN</span>
-      <span style=color:#f92672>env</span>:
-        <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
-        <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
-</code></pre></div><p>Now every build of your Github Actions pipeline analyzes the code using SonarCloud. That looks like below or see it live in action in the <a href=https://github.com/Baralga/baralga/actions>Baralga Actions</a>.</p>
-<p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_GithubActionsBuild.png alt="Baralga SonarCloud Build"></p>
-<h2 id=topping-it-off-with-code-coverage>Topping it off with Code Coverage</h2>
-<p>As last step we add the code coverage of our unit tests to SonarCloud.</p>
-<h3 id=step-1-calculate-test-coverage-with-jacoco>Step 1: Calculate Test Coverage with Jacoco</h3>
-<p>We use <a href=https://www.eclemma.org/jacoco/>Jacoco</a> to calculate the code coverage of our tests. For that we add the <a href=https://www.eclemma.org/jacoco/trunk/doc/maven.html>jacoco-maven-plugin</a> to our <code>pom.xml</code>:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=color:#f92672>&lt;plugins&gt;</span>
-  ...
-  <span style=color:#f92672>&lt;plugin&gt;</span>
-    <span style=color:#f92672>&lt;groupId&gt;</span>org.jacoco<span style=color:#f92672>&lt;/groupId&gt;</span>
-    <span style=color:#f92672>&lt;artifactId&gt;</span>jacoco-maven-plugin<span style=color:#f92672>&lt;/artifactId&gt;</span>
-    <span style=color:#f92672>&lt;version&gt;</span>0.8.5<span style=color:#f92672>&lt;/version&gt;</span>
-    <span style=color:#f92672>&lt;executions&gt;</span>
-      <span style=color:#f92672>&lt;execution&gt;</span>
-        <span style=color:#f92672>&lt;id&gt;</span>prepare-agent<span style=color:#f92672>&lt;/id&gt;</span>
-        <span style=color:#f92672>&lt;goals&gt;</span>
-          <span style=color:#f92672>&lt;goal&gt;</span>prepare-agent<span style=color:#f92672>&lt;/goal&gt;</span>
-        <span style=color:#f92672>&lt;/goals&gt;</span>
-      <span style=color:#f92672>&lt;/execution&gt;</span>
-      <span style=color:#f92672>&lt;execution&gt;</span>
-        <span style=color:#f92672>&lt;id&gt;</span>report<span style=color:#f92672>&lt;/id&gt;</span>
-          <span style=color:#f92672>&lt;phase&gt;</span>prepare-package<span style=color:#f92672>&lt;/phase&gt;</span>
-          <span style=color:#f92672>&lt;goals&gt;</span>
-            <span style=color:#f92672>&lt;goal&gt;</span>report<span style=color:#f92672>&lt;/goal&gt;</span>
-        <span style=color:#f92672>&lt;/goals&gt;</span>
-      <span style=color:#f92672>&lt;/execution&gt;</span>
-    <span style=color:#f92672>&lt;/executions&gt;</span>
-  <span style=color:#f92672>&lt;/plugin&gt;</span>
-<span style=color:#f92672>&lt;plugins&gt;</span>
-</code></pre></div><p>We tell SonarCloud where to find the calculated code coverage using the parameter <code>-Dsonar.coverage.jacoco.xmlReportPaths=${project.build.directory}/site/jacoco/jacoco.xml</code> for our Maven build. After the next build the code coverage will show up in SonarCloud.</p>
-<h2 id=summary>Summary</h2>
-<p>Step by step we introduced SonarCloud to analyze our code within our ci pipeline using Github Actions. Whenever the ci pipeline runs, the code is analyzed using SonarCloud and the results and metrics are available
-in the SonarCloud dashboard. You can find a working example at <a href=https://github.com/Baralga/baralga>baralga</a>.</p>
-</article>
-</div></body>
-</html>
+<a href=/posts/ title>Blog</a></nav><div id=content><h1>Using SonarCloud with Github Actions and Maven</h1><time datetime=2020-03-01>03/2020</time>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"NewsArticle","headline":"Using SonarCloud with Github Actions and Maven","author.name":"Jan Stamer","datePublished":"2020-03-01","dateModified":"2020-03-01"}</script><article><p>In this post you will will learn how to analyse your Java <a href=https://maven.apache.org/>Maven</a> project with <a href=https://sonarcloud.io/>SonarCloud</a> using <a href=https://github.com/features/actions>Github Actions</a>.</p><p>Starting point is a simple Java project with a Maven build. First we&rsquo;ll use SonarCloud to analyze our source code from our local dev environment. Then we&rsquo;ll use Github Actions to run the Maven build. So finally we have a fully functional ci pipeline which builds and analyzes our code using Github Actions.</p><h2 id=set-up-sonarcloud>Set up SonarCloud</h2><h3 id=step-1-create-a-project>Step 1: Create a Project</h3><p>In order to use <a href=https://sonarcloud.io/>SonarCloud</a> you need to create an account and set up a project. So first create an account and log in. Now you can create a new project <a href=https://sonarcloud.io/projects/create>here</a> or using the &lsquo;+&rsquo; button. A project in SonarCloud must belong to an organization. SonarCloud automatically imports your Github organizations. So you can use any of your Github organizations or use the default organization by your Github user name.</p><p><img src=SonarCloud_CreateProject.png alt="SonarCloud Create Project"></p><p>After you&rsquo;ve created your project, your project has an organization key and a project key. You&rsquo;ll need both to run an SonarCloud analysis. You can always look up organization key and project key from the dashboard
+of your project like shown below.</p><p><img src=SonarCloud_ProjectKey.png alt="SonarCloud Project Key"></p><h3 id=step-2-generate-a-sonarcloud-token>Step 2: Generate a SonarCloud Token</h3><p>Now we&rsquo;ll set up a secure token as authentication for SonarCloud. Generate a new token from the tab &lsquo;security&rsquo; in your account settings (which is <a href=https://sonarcloud.io/account/security/>here</a>). Make sure to store the token since you&rsquo;ll only see it right after you&rsquo;ve greated it. Now you&rsquo;re all set up to run a first analysis.</p><p><img src=SonarCloud_GenerateToken.png alt="SonarCloud Generate Token"></p><h2 id=run-sonarcloud-analysis-locally-using-maven>Run SonarCloud analysis locally using Maven</h2><p>You can run the SonarCloud analysis using maven. The organization key, project key and the generated token must be passed to the <a href=https://docs.sonarqube.org/latest/analysis/scan/sonarscanner-for-maven/>Sonar Maven Plugin</a> as well as the url for SonarCloud. Replace <code>&lt;GENERATED_TOKEN></code> with the SonarCloud token you generated in the previous step. So the command is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>mvn sonar:sonar <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>   -Dsonar.projectKey<span style=color:#f92672>=</span>baralga <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>   -Dsonar.organization<span style=color:#f92672>=</span>baralga <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>   -Dsonar.host.url<span style=color:#f92672>=</span>https://sonarcloud.io <span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>   -Dsonar.login<span style=color:#f92672>=</span>&lt;GENERATED_TOKEN&gt;
+</span></span></code></pre></div><p>After you ran the analysis the results will shortly be online in the SonarCloud dashboard at <code>https://sonarcloud.io/dashboard?id=&lt;projectKey></code>. The dashboard for our sample project <code>baralga</code> is available at <a href="https://sonarcloud.io/dashboard?id=baralga">https://sonarcloud.io/dashboard?id=baralga</a>.</p><h2 id=run-sonarcloud-analysis-using-github-actions>Run SonarCloud analysis using Github Actions</h2><p>Now we will use Github Actions to run the SonarCloud analysis from our ci pipeline. We&rsquo;ll use Maven for that like we did before. We set up Github Action that runs the SonarClound analysis using Maven. Like before we pass organization key and project key as parameters. Additionally we need to provide the SonarCloud token and the <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token>Github Token</a>.</p><p>The token for SonarCloud is stored as a encrypted secret as described <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets>here</a>. We can access it in our Github Action with <code>${{ secrets.SONAR_TOKEN }}</code>. The <a href=https://help.github.com/en/actions/configuring-and-managing-workflows/authenticating-with-the-github_token>Github Token</a> is already provided by Github Actions itself and we can access it with <code>${{ secrets.GITHUB_TOKEN }}</code>.</p><p>And here&rsquo;s the complete Github Action workflow. Save it in the file <code>.github\workflows\sonar.yml</code> and off you go.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>name</span>: <span style=color:#ae81ff>SonarCloud</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>on</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>push</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>branches</span>:
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>master</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>jobs</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>build</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>runs-on</span>: <span style=color:#ae81ff>ubuntu-16.04</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>steps</span>:
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/checkout@v1</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Set up JDK</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>uses</span>: <span style=color:#ae81ff>actions/setup-java@v1</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>with</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>java-version</span>: <span style=color:#e6db74>&#39;11&#39;</span>
+</span></span><span style=display:flex><span>    - <span style=color:#f92672>name</span>: <span style=color:#ae81ff>Analyze with SonarCloud</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>run</span>: <span style=color:#ae81ff>./mvnw -B verify sonar:sonar -Dsonar.projectKey=baralga -Dsonar.organization=baralga -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>env</span>:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>GITHUB_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.GITHUB_TOKEN }}</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>SONAR_TOKEN</span>: <span style=color:#ae81ff>${{ secrets.SONAR_TOKEN }}</span>
+</span></span></code></pre></div><p>Now every build of your Github Actions pipeline analyzes the code using SonarCloud. That looks like below or see it live in action in the <a href=https://github.com/Baralga/baralga/actions>Baralga Actions</a>.</p><p><img src=https://github.com/remast/remast.github.io/raw/master/posts/2020-03_SonarCloud_with_GithubAction_and_Maven/SonarCloud_GithubActionsBuild.png alt="Baralga SonarCloud Build"></p><h2 id=topping-it-off-with-code-coverage>Topping it off with Code Coverage</h2><p>As last step we add the code coverage of our unit tests to SonarCloud.</p><h3 id=step-1-calculate-test-coverage-with-jacoco>Step 1: Calculate Test Coverage with Jacoco</h3><p>We use <a href=https://www.eclemma.org/jacoco/>Jacoco</a> to calculate the code coverage of our tests. For that we add the <a href=https://www.eclemma.org/jacoco/trunk/doc/maven.html>jacoco-maven-plugin</a> to our <code>pom.xml</code>:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#f92672>&lt;plugins&gt;</span>
+</span></span><span style=display:flex><span>  ...
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&lt;plugin&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;groupId&gt;</span>org.jacoco<span style=color:#f92672>&lt;/groupId&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;artifactId&gt;</span>jacoco-maven-plugin<span style=color:#f92672>&lt;/artifactId&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;version&gt;</span>0.8.5<span style=color:#f92672>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;executions&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&lt;execution&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;id&gt;</span>prepare-agent<span style=color:#f92672>&lt;/id&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;goals&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&lt;goal&gt;</span>prepare-agent<span style=color:#f92672>&lt;/goal&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;/goals&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&lt;/execution&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&lt;execution&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;id&gt;</span>report<span style=color:#f92672>&lt;/id&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&lt;phase&gt;</span>prepare-package<span style=color:#f92672>&lt;/phase&gt;</span>
+</span></span><span style=display:flex><span>          <span style=color:#f92672>&lt;goals&gt;</span>
+</span></span><span style=display:flex><span>            <span style=color:#f92672>&lt;goal&gt;</span>report<span style=color:#f92672>&lt;/goal&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;/goals&gt;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>&lt;/execution&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;/executions&gt;</span>
+</span></span><span style=display:flex><span>  <span style=color:#f92672>&lt;/plugin&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;plugins&gt;</span>
+</span></span></code></pre></div><p>We tell SonarCloud where to find the calculated code coverage using the parameter <code>-Dsonar.coverage.jacoco.xmlReportPaths=${project.build.directory}/site/jacoco/jacoco.xml</code> for our Maven build. After the next build the code coverage will show up in SonarCloud.</p><h2 id=summary>Summary</h2><p>Step by step we introduced SonarCloud to analyze our code within our ci pipeline using Github Actions. Whenever the ci pipeline runs, the code is analyzed using SonarCloud and the results and metrics are available
+in the SonarCloud dashboard. You can find a working example at <a href=https://github.com/Baralga/baralga>baralga</a>.</p></article></div></body></html>
