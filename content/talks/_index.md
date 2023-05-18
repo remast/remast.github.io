@@ -5,9 +5,17 @@ description: "Jan Stamer | Vorträge"
 draft: false
 ---
 
-<h2>2021</h2>
+<h2>2023</h2>
 <dl>
     <dt>12/2021</dt>
+    <dd><a href="https://entwickler.de/cloud-native-entwicklung-mit-go/">Cloud-native Entwicklung mit Go</a>
+    auf Live Event von <a href="https://entwickler.de/">entwickler.de</a>
+    </dd>
+</dl>
+
+<h2>2021</h2>
+<dl>
+    <dt>05/2023</dt>
     <dd><a href="https://www.ittage.informatik-aktuell.de/programm/2021/google-go-fuer-java-entwickler-java-to-go.html">Java to Go – Google Go für Java-Entwickler</a>
     auf <a href="https://www.ittage.informatik-aktuell.de">IT-Tage 2021</a>
     </dd>

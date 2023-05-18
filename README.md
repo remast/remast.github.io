@@ -54,6 +54,10 @@
 
 # Vorträge
 
+## 2023
+
+* 05/2023 [Cloud-native Entwicklung mit Go](https://entwickler.de/cloud-native-entwicklung-mit-go/) auf Live Event von [entwickler.de/](https://entwickler.de/)
+
 ## 2021
 
 * 12/2021 [IT Tage 2021](https://www.ittage.informatik-aktuell.de), [Java to Go – Google Go für Java-Entwickler](https://www.ittage.informatik-aktuell.de/programm/2021/google-go-fuer-java-entwickler-java-to-go.html)
