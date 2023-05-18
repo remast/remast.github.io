@@ -2,6 +2,10 @@
 
 # Artikel
 
+## 2023
+* 05/2023 [Kommandozeilen-Apps mit Go](https://entwickler.de/go/go-kommandozeilen-apps) für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+* 04/2023 [Cloud-native entwickeln mit Go](https://entwickler.de/go/cloud-native-go) für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)
+
 ## 2022
 
 * 03/2023 Webentwicklung mit Go für [Entwickler Magazin](https://entwickler.de/entwickler-magazin)

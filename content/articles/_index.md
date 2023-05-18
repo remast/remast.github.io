@@ -5,6 +5,19 @@ description: "Jan Stamer | Artikel"
 draft: false
 ---
 
+<h2>2023</h2>
+<dl>
+    <dt>05/2023</dt>
+    <dd>
+        <a href="https://entwickler.de/go/go-kommandozeilen-apps">Kommandozeilen-Apps mit Go</a> für <a href="https://entwickler.de/entwickler-magazin">Entwickler Magazin</a>
+    </dd>
+</dl>
+<dl>
+    <dt>04/2023</dt>
+    <dd>
+        <a href="https://entwickler.de/go/cloud-native-go">Cloud-native entwickeln mit Go</a> für <a href="https://entwickler.de/entwickler-magazin">Entwickler Magazin</a>
+    </dd>
+</dl>
 <h2>2022</h2>
 <dl>
     <dt>03/2022</dt>
