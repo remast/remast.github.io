@@ -56,6 +56,8 @@
 
 ## 2023
 
+* 11/2023 [W-JAX 2023](https://jax.de/), [Go über den Wolken](https://jax.de/core-java-jvm-languages/go-cloud-entwicklung/)
+
 * 05/2023 [Cloud-native Entwicklung mit Go](https://entwickler.de/cloud-native-entwicklung-mit-go/) auf Live Event von [entwickler.de/](https://entwickler.de/)
 
 ## 2021

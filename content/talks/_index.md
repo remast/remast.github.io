@@ -7,7 +7,13 @@ draft: false
 
 <h2>2023</h2>
 <dl>
-    <dt>12/2021</dt>
+    <dt>11/2023</dt>
+    <dd><a href="https://jax.de/core-java-jvm-languages/go-cloud-entwicklung/">Go über den Wolken</a>
+    auf <a href="https://jax.de/">W-JAX</a>
+    </dd>
+</dl>
+<dl>
+    <dt>05/2023</dt>
     <dd><a href="https://entwickler.de/cloud-native-entwicklung-mit-go/">Cloud-native Entwicklung mit Go</a>
     auf Live Event von <a href="https://entwickler.de/">entwickler.de</a>
     </dd>
