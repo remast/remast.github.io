@@ -1,9 +1,29 @@
 ---
 title: "Vorträge"
-date: 2021-09-01T23:11:13Z
+date: 2024-11-01T23:11:13Z
 description: "Jan Stamer | Vorträge"
 draft: false
 ---
+
+<h2>2024</h2>
+<dl>
+    <dt>11/2024</dt>
+    <dd><a href="https://jax.de/cloud-container-serverless/serverless-mit-go/">Serverless mit Go</a>
+    auf <a href="https://jax.de/">W-JAX</a>
+    </dd>
+    <dt>11/2024</dt>
+    <dd><a href="https://jax.de/cloud-container-serverless/go-in-der-praxis/">Go in der Praxis</a>
+    auf <a href="https://jax.de/">JAX</a>
+    </dd>
+    <dt>04/2024</dt>
+    <dd><a href="https://jax.de/core-java-jvm-languages/go-cloud-entwicklung/">Go über den Wolken</a>
+    auf <a href="https://jax.de/">JAX</a>
+    </dd>
+    <dt>04/2024</dt>
+    <dd><a href="https://jax.de/cloud-container-serverless/go-in-der-praxis/">Go in der Praxis</a>
+    auf <a href="https://jax.de/">JAX</a>
+    </dd>
+</dl>
 
 <h2>2023</h2>
 <dl>
