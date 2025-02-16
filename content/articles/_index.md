@@ -5,19 +5,42 @@ description: "Jan Stamer | Artikel"
 draft: false
 ---
 
+<h2>2025</h2>
+<dl>
+    <dt>02/2025</dt>
+    <dd>
+        <a href="https://entwickler.de/go/go-fast-and-serverless">Go Fast and Serverless</a> für <a href="https://entwickler.de">entwickler.de</a>
+    </dd>
+    <dt>01/2025</dt>
+    <dd>
+        <a href="https://entwickler.de/go/go-container-to-go">Container to Go</a> für <a href="https://entwickler.de">entwickler.de</a>
+    </dd>
+    <dt>01/2025</dt>
+    <dd>
+        <a href="https://entwickler.de/go/go-rest">REST mit Go</a> für <a href="https://entwickler.de">entwickler.de</a>
+    </dd>
+</dl>
+
+<h2>2024</h2>
+<dl>
+    <dt>01/2024</dt>
+    <dd>
+        <a href="https://entwickler.de/go/webanwendung-go">Webanwendungen mit Go</a> für <a href="https://entwickler.de">entwickler.de</a>
+    </dd>
+</dl>
+
 <h2>2023</h2>
 <dl>
     <dt>05/2023</dt>
     <dd>
         <a href="https://entwickler.de/go/go-kommandozeilen-apps">Kommandozeilen-Apps mit Go</a> für <a href="https://entwickler.de/entwickler-magazin">Entwickler Magazin</a>
     </dd>
-</dl>
-<dl>
     <dt>04/2023</dt>
     <dd>
         <a href="https://entwickler.de/go/cloud-native-go">Cloud-native entwickeln mit Go</a> für <a href="https://entwickler.de/entwickler-magazin">Entwickler Magazin</a>
     </dd>
 </dl>
+
 <h2>2022</h2>
 <dl>
     <dt>03/2022</dt>

@@ -5,6 +5,18 @@ description: "Jan Stamer | Vorträge"
 draft: false
 ---
 
+<h2>2025</h2>
+<dl>
+    <dt>04/2025</dt>
+    <dd><a href="https://jax.de/core-java-jvm-languages/rust-versus-go-live-coding/">Rust versus Go Live-Coding</a>
+    auf <a href="https://jax.de/">JAX</a>
+    </dd>
+    <dt>04/2025</dt>
+    <dd><a href="https://jax.de/core-java-jvm-languages/go-crashkurs/">Go Crashkurs</a>
+    auf <a href="https://jax.de/">JAX</a>
+    </dd>
+</dl>
+
 <h2>2024</h2>
 <dl>
     <dt>11/2024</dt>
