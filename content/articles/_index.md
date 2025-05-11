@@ -5,6 +5,18 @@ description: "Jan Stamer | Artikel"
 draft: false
 ---
 
+<h2>Kurse</h2>
+<dl>
+    <dt>2024</dt>
+    <dd>
+        <a href="https://www.linkedin.com/learning/microservices-mit-spring-boot-24015928/">Microservices mit Spring Boot</a> für <a href="https://www.linkedin.com/learning/">LinkedIn Learning</a>
+    </dd>
+    <dt>2024</dt>
+    <dd>
+        <a href="https://www.linkedin.com/learning/instructors/jan-stamer">Go Grundlagen</a> für <a href="https://www.linkedin.com/learning/">LinkedIn Learning</a>
+    </dd>
+</dl>
+
 <h2>2025</h2>
 <dl>
     <dt>02/2025</dt>
